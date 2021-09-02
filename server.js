@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
+app.set("view engine", "ejs");
 
 const MongoClient = require("mongodb").MongoClient;
 
@@ -24,6 +25,15 @@ app.get("/", function (요청, 응답) {
 
 app.get("/write", function (요청, 응답) {
   응답.sendFile(__dirname + "/write.html");
+});
+
+app.get("/list", function (요청, 응답) {
+  db.collection("post")
+    .find()
+    .toArray(function (에러, 결과) {
+      console.log(결과);
+      응답.render("list.ejs", { posts: 결과 });
+    });
 });
 
 app.post("/add", function (요청, 응답) {
