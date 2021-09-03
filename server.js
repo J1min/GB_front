@@ -8,7 +8,7 @@ const MongoClient = require("mongodb").MongoClient;
 
 var db;
 MongoClient.connect(
-  "mongodb+srv://admin:qwer1234@cluster0.rjy7d.mongodb.net/SERVER?retryWrites=true&w=majority",
+  "mongodb+srv://아이디:비밀번호@클러스터이름.rjy7d.mongodb.net/SERVER?retryWrites=true&w=majority",
   { useUnifiedTopology: true },
   function (에러, client) {
     if (에러) return console.log(에러);
@@ -40,6 +40,7 @@ app.post("/add", function (요청, 응답) {
   db.collection("post").insertOne(
     { 제목: 요청.body.title, 날짜: 요청.body.date },
     function (에러, 결과) {
+      if (에러) return 에러;
       console.log("저장완료");
     }
   );
