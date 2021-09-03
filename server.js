@@ -8,7 +8,7 @@ const MongoClient = require("mongodb").MongoClient;
 
 var db;
 MongoClient.connect(
-  "mongodb+srv://아이디:비밀번호@클러스터이름.rjy7d.mongodb.net/SERVER?retryWrites=true&w=majority",
+  "mongodb+srv://admin:qwer1234@cluster0.rjy7d.mongodb.net/SERVER?retryWrites=true&w=majority",
   { useUnifiedTopology: true },
   function (에러, client) {
     if (에러) return console.log(에러);
@@ -32,7 +32,7 @@ app.get("/list", function (요청, 응답) {
     .find()
     .toArray(function (에러, 결과) {
       console.log(결과);
-      응답.render("list.ejs", { posts: 결과 });
+      응답.render("list.ejs", { answer: 결과 });
     });
 });
 

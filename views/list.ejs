@@ -17,8 +17,9 @@
     <title>DB에 저장</title>
   </head>
   <body>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">상단 바</a>
+      <a class="navbar-brand" href="/">메인</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -34,12 +35,12 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >213321 <span class="sr-only">(current)</span></a
-            >
+            <a class="nav-link" href="write"
+              >내 할일 쓰기 <span class="sr-only"></span
+            ></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">뱅드림</a>
+            <a class="nav-link" href="list">내 할일 보기</a>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -70,7 +71,7 @@
             >
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+        <form action="/write" method="GET" class="form-inline my-2 my-lg-0">
           <input
             class="form-control mr-sm-2"
             type="search"
@@ -83,10 +84,62 @@
         </form>
       </div>
     </nav>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="write"
+            >내 할일 쓰기 <span class="sr-only"></span
+          ></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="list">내 할일 보기</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link disabled"
+            href="#"
+            tabindex="-1"
+            aria-disabled="true"
+            >Disabled</a
+          >
+        </li>
+      </ul>
+      <form action="/write" method="GET" class="form-inline my-2 my-lg-0">
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          Search
+        </button>
+      </form>
+    </div>
+  </nav>
 
-    <% for (var i = 0; i < 3; i++) { %>
-    <h4>할일 제목 : <%= posts[i].제목 %></h4>
-    <p>할일 마감 날짜 : <%= posts[i].날짜 %></p>
+    <% for (var i = 0; i < answer.length; i++) { %>
+    <h4>할일 제목 : <%= answer[i].제목 %></h4>
+    <p>할일 마감 날짜 : <%= answer[i].날짜 %></p>
     <% } %>
 
     <script
