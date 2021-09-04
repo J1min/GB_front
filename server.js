@@ -37,12 +37,5 @@ app.get("/list", function (요청, 응답) {
 });
 
 app.post("/add", function (요청, 응답) {
-  db.collection("post").insertOne(
-    { 제목: 요청.body.title, 날짜: 요청.body.date },
-    function (에러, 결과) {
-      if (에러) return 에러;
-      console.log("저장완료");
-    }
-  );
-  응답.send("전송완료");
+
 });
