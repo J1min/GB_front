@@ -37,7 +37,7 @@ app.get("/list", function (요청, 응답) {
 });
 
 app.post("/add", function (요청, 응답) {
-  응답.send("전송완료");
+  응답.send("전송끘");
   db.collection("counter").findOne(
     { name: "게시물갯수" },
     function (에러, 결과) {
