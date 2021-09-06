@@ -54,11 +54,20 @@ app.post("/add", function (요청, 응답) {
             { name: "게시물갯수" },
             { $inc: { totalPost: 1 } },
             function (에러, 결과) {
-              if (에러) return console.log(에러);
+              // if (에러) return console.log(에러);
             }
           );
         }
       );
     }
   );
+});
+
+app.delete("/delete", function (요청, 응답) {
+  // console.log(요청.body);
+  요청.body._id = parseInt(요청.body._id);
+  db.collection("post").deleteOne(요청.body, function (에러, 결과) {
+    console.log("삭제완료");
+    응답.status(200).send({ message: "성공" });
+  });
 });
