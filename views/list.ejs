@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -142,7 +143,7 @@
   <li class="list-group-item">
     <h4> 할일 제목 : <%= answer[i].제목 %> </h4>
     <p> 할일 마감날짜 : <%= answer[i].날짜 %> </p>
-    <button class="delete">삭제</button>
+    <button class="delete" data-id="<%= answer[i]._id %>">삭제</button>
   </li>
   <% } %>
 </ul>
@@ -150,28 +151,23 @@
 
 <script>
   $('.delete').click(function(e){
+    var 글번호 = e.target.dataset.id;
     var 지금누른거 = $(this);
     $.ajax({
       method : 'DELETE',
       url : '/delete',
-      data : { _id : e.target.dataset.id },
+      data : { _id : 글번호 },
   
     }).done(function(결과){
   
   
       console.log("성공");
         지금누른거.parent('li').fadeOut();
-
   
-      }).fail(function() {
-
-    });
+      }).fail(function(xhr, textStatus, errerThrown) {
+        console.log(xhr, textStatus, errerThrown)
+    }); // 에러메시지를 출력해주는 3개의 인자들
   })
-
-
-
-
-
 </script>
 
     <script
