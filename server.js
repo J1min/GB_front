@@ -71,3 +71,16 @@ app.delete("/delete", function (요청, 응답) {
     응답.status(200).send({ message: "성공" });
   });
 });
+
+app.get("/de/:id", function (요청, 응답) {
+  db.collection("post").findOne(
+    { _id: parseInt(요청.params.id) },
+    function (에러, 결과) {
+      console.log(결과);
+      응답.render("de.ejs", { data: 결과 });
+      if (data === null) {
+        console.log("해당 페이지가 존재 나이 데스");
+      }
+    }
+  );
+});
