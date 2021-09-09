@@ -67,7 +67,7 @@ app.delete("/delete", function (요청, 응답) {
   // console.log(요청.body);
   요청.body._id = parseInt(요청.body._id);
   db.collection("post").deleteOne(요청.body, function (에러, 결과) {
-    console.log("삭제끗");
+    console.log("삭제끝");
     응답.status(200).send({ message: "성공" });
   });
 });
@@ -79,7 +79,7 @@ app.get("/de/:id", function (요청, 응답) {
       console.log(결과);
       응답.render("de.ejs", { data: 결과 });
       //if (data === null) {
-      //  console.log("해당 페이지가 존재 나이 데스");
+      //  console.log("해당 페이지가 존재하지 않아용");
       //}
     }
   );
