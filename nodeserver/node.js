@@ -27,6 +27,15 @@ app.get("/show", function (req, res) {
   res.sendFile(__dirname + "/write.html");
 });
 
+app.get("/list", function (요청, 응답) {
+  db.collection("post")
+    .find()
+    .toArray(function (에러, 결과) {
+      console.log(결과);
+      응답.render("list.ejs", { answer: 결과 });
+    });
+});
+
 app.post("/add", function (req, res) {
   res.send("전송완료");
   db.collection("counter").findOne(
@@ -48,4 +57,9 @@ app.post("/add", function (req, res) {
       );
     }
   );
+});
+
+app.delete("/delete", function (req, res) {
+  req.body._id = parseInt(req.body._id);
+  db.collection("post").deleteOne({ _id: req.body._id });
 });
