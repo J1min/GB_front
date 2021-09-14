@@ -23,7 +23,6 @@ MongoClient.connect(
 
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/index.html");
-  req.send("전송 끝");
 });
 
 app.get("/show", function (req, res) {
@@ -32,7 +31,6 @@ app.get("/show", function (req, res) {
 
 app.post("/add", function (req, res) {
   res.send("전송 완료");
-
   db.collection("counter").findOne(
     { name: "게시물갯수" },
     function (에러, 결과) {
@@ -42,6 +40,7 @@ app.post("/add", function (req, res) {
       db.collection("post").insertOne(
         { _id: 총게시물갯수 + 1, 제목: req.body.title, 날짜: req.body.date },
         function (에러, 결과) {
+          if (에러) return 에러;
           console.log("저장완료");
         }
       );
