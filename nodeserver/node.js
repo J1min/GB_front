@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
-const port = 8081;
+const port = 18080;
 app.set("view engine", "ejs");
 const MongoClient = require("mongodb").MongoClient;
 
@@ -14,7 +14,7 @@ MongoClient.connect(
     if (에러) return console.log(에러);
     db = client.db("myweb");
     app.listen(port, function () {
-      console.log("listening on 8081");
+      console.log("listening on 18080");
     });
   }
 );
