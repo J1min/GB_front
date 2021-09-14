@@ -28,7 +28,7 @@ app.get("/show", function (req, res) {
 });
 
 app.post("/add", function (req, res) {
-  res.send("전송 완료");
+  res.send("전송완료");
   db.collection("counter").findOne(
     { name: "게시물갯수" },
     function (에러, 결과) {
