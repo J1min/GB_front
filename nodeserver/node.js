@@ -41,7 +41,7 @@ app.post("/add", function (req, res) {
         { _id: 총게시물갯수 + 1, 제목: req.body.title, 날짜: req.body.date },
         function (에러, 결과) {
           if (에러) return 에러;
-          console.log("저장완료");
+          console.log("저장끝");
         }
       );
       db.collection("counter").updateOne(
