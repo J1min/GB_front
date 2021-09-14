@@ -19,8 +19,6 @@ MongoClient.connect(
   }
 );
 
-// 제목: req.body.title, 날짜: req.body.date
-
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/index.html");
 });
