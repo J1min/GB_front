@@ -138,7 +138,6 @@
     </div>
   </nav>
 
-<ul class="list-group">
   <% for (var i = 0; i < answer.length; i++){ %>
   <li class="list-group-item">
     <h4> 할일 제목 : <%= answer[i].제목 %> </h4>
@@ -146,7 +145,6 @@
     <button class="delete" data-id="<%= answer[i]._id %>">삭제</button>
   </li>
   <% } %>
-</ul>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
 <script>

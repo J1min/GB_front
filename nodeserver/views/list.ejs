@@ -29,20 +29,18 @@
       <button id="delete">삭제</button>
 
       <script>
-            $(".delete").click(function(e) {
-                글번호 = e.target._id;
-                지금누른거 = $(this)
+        $(".delete").click(function (e) {
+          글번호 = e.target._id;
+          지금누른거 = $(this);
 
-                $.ajax({
-                    url: "/delete",
-                    method: 'DELETE',
-                    data: { _id : 글번호 },
-                done: function(결과){
-        },
-            fail: function (request, status, error){
-        }
+          $.ajax({
+            url: "/delete",
+            method: "DELETE",
+            data: { _id: 글번호 },
+            done: function (결과) {},
+            fail: function (request, status, error) {},
+          });
         });
-            }
       </script>
     </div>
     <script
@@ -56,9 +54,9 @@
       crossorigin="anonymous"
     ></script>
   </body>
+  <style>
+    #list {
+      text-align: center;
+    }
+  </style>
 </html>
-<style>
-  #list {
-    text-align: center;
-  }
-</style>

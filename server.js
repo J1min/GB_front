@@ -31,6 +31,7 @@ app.get("/list", function (요청, 응답) {
   db.collection("post")
     .find()
     .toArray(function (에러, 결과) {
+      
       console.log(결과);
       응답.render("list.ejs", { answer: 결과 });
     });
