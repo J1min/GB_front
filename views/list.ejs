@@ -157,11 +157,10 @@
       data : { _id : 글번호 },
   
     }).done(function(결과){
-  
-  
+
       console.log("성공");
         지금누른거.parent('li').fadeOut();
-  
+      
       }).fail(function(xhr, textStatus, errerThrown) {
         console.log(xhr, textStatus, errerThrown)
     }); // 에러메시지를 출력해주는 3개의 인자들

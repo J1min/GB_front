@@ -60,6 +60,10 @@ app.post("/add", function (req, res) {
 });
 
 app.delete("/delete", function (req, res) {
+  // console.log(req.body);
   req.body._id = parseInt(req.body._id);
-  db.collection("post").deleteOne({ _id: req.body._id });
+  db.collection("post").deleteOne(req.body, function (에러, 결과) {
+    console.log("삭제끝");
+    res.status(200).send({ message: "성공" });
+  });
 });
