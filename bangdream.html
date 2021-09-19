@@ -10,9 +10,15 @@
 </html>
 
 <script>
-  const fruits = ["1", "2", "3", "4", "5"];
+  const arr = ["가", "라", "다", "라", "마", "라"];
 
-  // 배열 뒤에서 3번째 찾기
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] === "라") {
+      arr.splice(i, 1);
+    }
+  }
 
-  alert(fruits[fruits.length - 3]);
+  for (var i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+  }
 </script>
