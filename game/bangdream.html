@@ -6,12 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>자바스크립트 끗말잇기</title>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div><span id1="order" id="cnt_result">1</span>번째 참가자</div>
-    <div>제시어 : <span id="result"></span></div>
-    <input type="text" id="text1" onkeyup="enterkey();" />
-    <button id="inputBtn" onclick="setCnt(); printName()">입력</button>
+    <div class="cll">
+      <div><span id1="order" id="cnt_result">1</span>번 유저</div>
+      <div>
+        < 제시어 >
+        <div id="result"></div>
+      </div>
+      <input type="text" id="text1" onkeyup="enterkey();" />
+      <button
+        id="inputBtn"
+        class="btn btn-outline-success"
+        onclick="setCnt(); printName()"
+      >
+        입력
+      </button>
+    </div>
   </body>
 </html>
 
@@ -36,6 +58,8 @@
     if (window.event.keyCode == 13) {
       // 엔터키가 눌렸을 때 실행할 내용
       printName();
+
+      //$("#text1").val(null);
     }
   }
 
@@ -55,6 +79,7 @@
     } else {
       // word == null
     }
+    $input.value = null;
   };
 
   const inputValue = (e) => {
@@ -63,10 +88,16 @@
 
   $button.addEventListener("click", clickButton);
   $input.addEventListener("change", inputValue);
-  $("#name").val("");
+
   $("#text1").keyup(function (event) {
     if (event.keyCode === 13) {
       $("#inputBtn").click();
     }
   });
 </script>
+
+<style>
+  .cll {
+    text-align: center !important;
+  }
+</style>
