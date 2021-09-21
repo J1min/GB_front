@@ -39,9 +39,6 @@
 </html>
 
 <script>
-  // var member = prompt("몇명이 참가하나요?");
-  // console.log(member + "명");
-
   let word;
   let newWord;
   const number = Number(prompt("총 인원수는 몇명인가요 ?"));
@@ -52,6 +49,8 @@
     document.getElementById("cnt_result").innerHTML = overlap_cnt;
     if (overlap_cnt > number - 1) {
       overlap_cnt = 0;
+    } else if (text1.value === null) {
+      $alert.innerText = "단어를 입력해주세요";
     }
   }
 
@@ -90,9 +89,7 @@
     //} else {
     // $alert.value = "앙 기모띠";
     //}
-    if (text1.value === null) {
-      $alert.innerText = "단어를 입력해주세요";
-    }
+
     $input.value = null;
   };
 
