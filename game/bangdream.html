@@ -29,11 +29,12 @@
       <button
         id="inputBtn"
         class="btn btn-outline-success"
-        onclick="setCnt(); printName()"
+        onclick="setCnt(); printName();"
       >
         입력
       </button>
     </div>
+    <div class="cll red" id="alertdiv"></div>
   </body>
 </html>
 
@@ -54,6 +55,14 @@
     }
   }
 
+  //function alertdiv() {}
+
+  $("#text1").keyup(function (event) {
+    if (event.keyCode === 13) {
+      $("#inputBtn").click();
+    }
+  });
+
   function enterkey() {
     if (window.event.keyCode == 13) {
       // 엔터키가 눌렸을 때 실행할 내용
@@ -71,13 +80,18 @@
   const $button = document.getElementById("inputBtn");
   const $input = document.getElementById("text1");
   const $word = document.getElementById("word");
+  const $alert = document.getElementById("alertdiv");
+  const $result = document.getElementById("result");
 
   const clickButton = () => {
     console.log("버튼 클릭");
-    if (word) {
-      // word != null
-    } else {
-      // word == null
+    //if (text1.value === null) {
+    //  $alert.value = "단어를 입력해주세요";
+    //} else {
+    // $alert.value = "앙 기모띠";
+    //}
+    if (text1.value === null) {
+      $alert.innerText = "단어를 입력해주세요";
     }
     $input.value = null;
   };
@@ -88,16 +102,13 @@
 
   $button.addEventListener("click", clickButton);
   $input.addEventListener("change", inputValue);
-
-  $("#text1").keyup(function (event) {
-    if (event.keyCode === 13) {
-      $("#inputBtn").click();
-    }
-  });
 </script>
 
 <style>
   .cll {
     text-align: center !important;
+  }
+  .red {
+    color: #ff0000;
   }
 </style>
