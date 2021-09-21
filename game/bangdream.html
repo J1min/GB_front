@@ -20,92 +20,79 @@
   </head>
   <body>
     <div class="cll">
-      <div><span id1="order" id="cnt_result">1</span>번 유저</div>
-      <div>
-        < 제시어 >
-        <div id="result"></div>
-      </div>
-      <input type="text" id="text1" onkeyup="enterkey();" />
+      <div><span id="order">1</span>번 유저</div>
+      <div>제시어 : <span id="word"></span></div>
+      <input type="text" id="input" />
       <button
-        id="inputBtn"
         class="btn btn-outline-success"
-        onclick="setCnt(); printName();"
+        onclick="wordChange(); numberPlus();"
       >
         입력
       </button>
+      <div id="alert"></div>
     </div>
-    <div class="cll red" id="alertdiv"></div>
   </body>
 </html>
 
 <script>
-  let word;
-  let newWord;
-  const number = Number(prompt("총 인원수는 몇명인가요 ?"));
+  var word = [];
+  var newWord = [];
+  var numberView = 1;
+  const number = Number(prompt("총 인원수는 몇명인가요 ?")); // 완성
+  const $input = document.getElementById("input"); // input 내의 값
+  const $button = document.getElementById("button"); // 버튼 클릭
+  const $word = document.getElementById("word"); // 맞으면 값 띄우기
+  const $order = document.getElementById("order"); // #번 유저
+  const $alert = document.getElementById("alert");
 
-  var overlap_cnt = 0; //페이지 변수 설정
-  function setCnt() {
-    overlap_cnt++;
-    document.getElementById("cnt_result").innerHTML = overlap_cnt;
-    if (overlap_cnt > number - 1) {
-      overlap_cnt = 0;
-    } else if (text1.value === null) {
-      $alert.innerText = "단어를 입력해주세요";
+  $order.innerText = numberView; // 완성 확인
+  // word = $word.value; // 미확인
+
+  function wordChange() {
+    // console.log(word); // 초기값은 NULL
+    console.log($input.value); // 안녕 녕안 둘다 되는 희귀종
+    // console.log(newWord); // 버그
+
+    if (!word || $input.value[word.length - 1] === newWord[0]) {
+      word = $input.value;
+      //console.log(word[word.length - 1]);
+      //console.log($input.value);
+
+      $word.textContent = word; // 입력받은 값 넣기
+
+      // console.log(word); // 안녕
+      newWord = $input.value;
+      $word.value = newWord;
+      console.log(newWord[0]); // 안
+      console.log($input.value[word.length - 1]); // 녕
+      // console.log($word.value); // 녕안 안됨
+      // console.log(newWord); // 안녕
+    }
+    if (!newWord && $input.value[0] != $input.value[word.length - 1]) {
+      $alert.textContent = "틀렸습니다 !";
     }
   }
 
-  //function alertdiv() {}
-
-  $("#text1").keyup(function (event) {
-    if (event.keyCode === 13) {
-      $("#inputBtn").click();
+  function numberPlus() {
+    if (numberView > number) {
+      numberView = 1;
     }
-  });
-
-  function enterkey() {
-    if (window.event.keyCode == 13) {
-      // 엔터키가 눌렸을 때 실행할 내용
-      printName();
-
-      //$("#text1").val(null);
+    if (!word || newWord[0] === $input.value[word.length - 1]) {
+      numberView++;
+      $order.innerHTML = numberView;
     }
-  }
-
-  function printName() {
-    const name = document.getElementById("text1").value;
-    document.getElementById("result").innerText = name;
-  }
-
-  const $button = document.getElementById("inputBtn");
-  const $input = document.getElementById("text1");
-  const $word = document.getElementById("word");
-  const $alert = document.getElementById("alertdiv");
-  const $result = document.getElementById("result");
-
-  const clickButton = () => {
-    console.log("버튼 클릭");
-    //if (text1.value === null) {
-    //  $alert.value = "단어를 입력해주세요";
-    //} else {
-    // $alert.value = "앙 기모띠";
-    //}
-
-    $input.value = null;
-  };
-
-  const inputValue = (e) => {
-    console.log("값 : ", e.target.value);
-  };
-
-  $button.addEventListener("click", clickButton);
-  $input.addEventListener("change", inputValue);
+  } // 완성 (번호 카운팅해주는 친구)
 </script>
 
 <style>
   .cll {
     text-align: center !important;
   }
-  .red {
-    color: #ff0000;
-  }
 </style>
+
+<!-- 내일 할 것 -->
+<!-- 카운트 시스템 안됨-->
+<!-- 제시어의 첫번째 단어와 -->
+<!-- 넣은 단어의 마지막끼리 비교를 함 이거 이상해 -->
+
+<!-- 겹치는 단어 거르기 만들기 -->
