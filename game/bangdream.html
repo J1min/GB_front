@@ -19,7 +19,7 @@
     ></script>
   </head>
   <body>
-    <div class="cll">
+    <div class="center">
       <div><span id="order">1</span>번 유저</div>
       <div>제시어 : <span id="word"></span></div>
       <input type="text" id="input" />
@@ -49,27 +49,22 @@
   // word = $word.value; // 미확인
 
   function wordChange() {
-    // console.log(word); // 초기값은 NULL
-    console.log($input.value); // 안녕 녕안 둘다 되는 희귀종
+    console.log(word); // 초기값은 NULL
+    //console.log($input.value); // 안녕 녕안 둘다 되는 희귀종
     // console.log(newWord); // 버그
-
-    if (!word || $input.value[word.length - 1] === newWord[0]) {
-      word = $input.value;
-      //console.log(word[word.length - 1]);
-      //console.log($input.value);
-
-      $word.textContent = word; // 입력받은 값 넣기
-
-      // console.log(word); // 안녕
-      newWord = $input.value;
-      $word.value = newWord;
-      console.log(newWord[0]); // 안
-      console.log($input.value[word.length - 1]); // 녕
-      // console.log($word.value); // 녕안 안됨
-      // console.log(newWord); // 안녕
+    newWord = $input.value;
+    word = $word.value;
+    if (!word || word[word.length - 1] === newWord[0]) {
+      //$word.textContent = word; // 입력받은 값 넣기
+      newWord = word;
+      //$word.value = newWord;
+      console.log(newWord);
+      console.log(word);
     }
-    if (!newWord && $input.value[0] != $input.value[word.length - 1]) {
-      $alert.textContent = "틀렸습니다 !";
+    if (word) {
+      if (newWord[0] != $word.value[word.length - 1]) {
+        $alert.textContent = "틀렸습니다 !";
+      }
     }
   }
 
@@ -77,22 +72,20 @@
     if (numberView > number) {
       numberView = 1;
     }
-    if (!word || newWord[0] === $input.value[word.length - 1]) {
-      numberView++;
-      $order.innerHTML = numberView;
-    }
+    //if (newWord[0] === $input.value[word.length - 1]) {
+    numberView++;
+    $order.innerHTML = numberView;
+    //}
   } // 완성 (번호 카운팅해주는 친구)
 </script>
 
 <style>
-  .cll {
+  .center {
     text-align: center !important;
   }
 </style>
 
 <!-- 내일 할 것 -->
 <!-- 카운트 시스템 안됨-->
-<!-- 제시어의 첫번째 단어와 -->
-<!-- 넣은 단어의 마지막끼리 비교를 함 이거 이상해 -->
-
-<!-- 겹치는 단어 거르기 만들기 -->
+<!-- 제시어의 첫번째 단어와 (newWord[0])-->
+<!-- 넣은 단어의 마지막끼리 비교를 함 이거 이상해 (word[word.length - 1])-->
