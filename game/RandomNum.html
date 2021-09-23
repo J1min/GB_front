@@ -9,16 +9,18 @@
   <body>
     <div>
       <h1>뽑힌 번호는 <span id="num"></span> 번 입니다 !!</h1>
+      <button onclick="$num.textContent = Math.floor(Math.random() * max) + 1">
+        번호 뽑기
+      </button>
     </div>
   </body>
 </html>
 <script>
-  $num = document.getElementById("num");
-  min = 1;
-  max = prompt("학생의 수를 입력해주세요");
-  function randomNum(min, max) {
-    var randNum = Math.floor(Math.random() * (max - min + 1)) + min;
-    return randNum;
-  }
-  $num.value = randNum;
+  const $num = document.getElementById("num");
+  const min = 1;
+  const max = Number(prompt("학생의 수를 입력해주세요"));
+
+  var rand = Math.floor(Math.random() * max);
+
+  $num.textContent = rand;
 </script>
