@@ -45,38 +45,18 @@
   const $order = document.getElementById("order"); // #번 유저
   const $alert = document.getElementById("alert");
 
-  $order.innerText = numberView; // 완성 확인
-  // word = $word.value; // 미확인
+  $order.textContent = numberView; // 완성 확인
+  word = $word.textContent;
 
-  function wordChange() {
-    console.log(word); // 초기값은 NULL
-    //console.log($input.value); // 안녕 녕안 둘다 되는 희귀종
-    // console.log(newWord); // 버그
-    newWord = $input.value;
-    word = $word.value;
-    if (!word || word[word.length - 1] === newWord[0]) {
-      //$word.textContent = word; // 입력받은 값 넣기
-      newWord = word;
-      //$word.value = newWord;
-      console.log(newWord);
-      console.log(word);
-    }
-    if (word) {
-      if (newWord[0] != $word.value[word.length - 1]) {
-        $alert.textContent = "틀렸습니다 !";
-      }
-    }
-  }
+  function wordChange() {}
 
   function numberPlus() {
-    if (numberView > number) {
+    if (number < numberView) {
       numberView = 1;
     }
-    //if (newWord[0] === $input.value[word.length - 1]) {
     numberView++;
-    $order.innerHTML = numberView;
-    //}
-  } // 완성 (번호 카운팅해주는 친구)
+    $order.innerHTML = numberView - 1;
+  }
 </script>
 
 <style>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>뽑힌 번호는 <span id="num"></span> 번 입니다 !!</h1>
+    </div>
+  </body>
+</html>
+<script>
+  $num = document.getElementById("num");
+  min = 1;
+  max = prompt("학생의 수를 입력해주세요");
+  function randomNum(min, max) {
+    var randNum = Math.floor(Math.random() * (max - min + 1)) + min;
+    return randNum;
+  }
+  $num.value = randNum;
+</script>
