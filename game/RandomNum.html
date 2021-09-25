@@ -13,8 +13,12 @@
     />
   </head>
   <body>
-    <div class="alert alert-success" role="alert">
-      <h1>뽑힌 번호는 <span id="num">?</span> 번 입니다 !!</h1>
+    <div
+      class="alert alert-success mt-5"
+      role="alert"
+      style="text-align: center"
+    >
+      <h1 class="mt-5">뽑힌 번호는 <span id="num">?</span> 번 입니다 !!</h1>
       <button
         onclick="$num.textContent = Math.floor(Math.random() * max) + 1"
         class="btn btn-outline-danger"
@@ -39,3 +43,4 @@
 
   // $num.textContent = rand;
 </script>
+<!-- 부트스트랩 link color 로 바꿔야겠다.  -->
