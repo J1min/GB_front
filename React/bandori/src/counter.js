@@ -13,7 +13,6 @@ class Counter extends Component {
     this.setState({
       number: this.state.number - 1,
     });
-
   render() {
     return (
       <Fragment>
