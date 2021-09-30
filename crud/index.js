@@ -1,15 +1,7 @@
-const express = require("express");
-const app = express();
-const port = 8090;
+$text = document.getElementById("allCon");
+$back = document.getElementById("allCon");
 
-app.listen(port, () => {
-  console.log("listening on " + port);
-});
-
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html");
-});
-
-app.post("/hi", (req, res) => {
-  res.sendFile(__dirname + "/index.html");
-});
+function onlight (){
+  $text.color = black;
+  
+}
