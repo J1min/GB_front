@@ -46,7 +46,9 @@
   </head>
   <body>
     <div id="allCon">
-      <button onclick="">다크모드</button>
+      <button onclick="onlight">다크모드</button>
+      <button onclick="onnight">라이트모드</button>
+
       <h1>레드향</h1>
       <p>
         껍질에 붉은 빛이 돌아 <span class="accent">레드향</span>이라 불린다.
@@ -64,3 +66,15 @@
     </div>
   </body>
 </html>
+
+<script>
+  function onlight() {
+    document.querySelector("body").style.backgroundColor = "white";
+    document.querySelector("body").style.color = "black";
+  }
+
+  function onnight() {
+    document.querySelector("body").style.backgroundColor = "black";
+    document.querySelector("body").style.color = "white";
+  }
+</script>
