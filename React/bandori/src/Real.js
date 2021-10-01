@@ -11,7 +11,7 @@ class Real extends Component {
     this.setState({
       number: this.state.number + 1,
     });
-  };
+  };   
 
   Dec = () => {
     this.setState({
