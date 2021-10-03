@@ -7,6 +7,12 @@ export default class PhoneForm extends Component {
     id: 0,
   };
 
+  handleClick = () => {
+    this.setState({
+      id: this.state.id + 1,
+    });
+  };
+
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.onCreate({
@@ -20,7 +26,6 @@ export default class PhoneForm extends Component {
     this.setState({
       [e.target.name]: e.target.value,
       [e.target.phone]: e.target.value,
-      id: e.target.id + 1,
     });
   };
 
