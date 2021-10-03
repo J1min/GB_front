@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from "react";
-import Counter from "./Counter";
 import Real from "./Real";
 import "./App.css";
 
@@ -7,13 +6,14 @@ class App extends Component {
   render() {
     return (
       <div className="App-header">
-        <Real></Real>
+        <Fragment>
+          <Real></Real>
+        </Fragment>
       </div>
     );
   }
 }
 Real.defaultProps = {
-  name: "안녕",
-  age: "20",
+  name: "",
 };
 export default App;
