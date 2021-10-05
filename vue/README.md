@@ -1,4 +1,4 @@
-# vuedongsan
+# vue
 
 ## Project setup
 ```
