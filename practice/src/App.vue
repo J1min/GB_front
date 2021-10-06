@@ -1,133 +1,62 @@
 <template>
-  <div class="default">
-    <div class="black" v-if="modalOpen == true">
-      <div class="white">
-        <h4>상세페이지임</h4>
-        <p>상세내용임</p>
-        <button @click="modalOpen = !modalOpen">닫기</button>
-      </div>
-    </div>
+  <div>
+    <p class="error">{{ error }}</p>
 
-    <div class="menu">
-      <a v-for="i in menus" :key="i" href="#">{{ i }}</a>
-    </div>
+    <p class="decode-result">Last result: <b>{{ result }}</b></p>
 
-    <img alt="Vue logo" src="./assets/logo.png" />
-
-    <div>
-      <img
-        src="./assets/room0.jpg"
-        class="room"
-        @click="modalOpen = !modalOpen"
-      />
-      <h4>{{ products[0] }}</h4>
-      <p>백마넌</p>
-      <button @click="increase">허위매물신고</button>
-      <span> 신고수 : {{ singo[0] }} </span>
-    </div>
-    <div>
-      <img
-        src="./assets/room1.jpg"
-        class="room"
-        @click="modalOpen = !modalOpen"
-      />
-      <h4>{{ products[1] }}</h4>
-      <p>백마넌</p>
-      <button @click="increase1">허위매물신고</button>
-      <span> 신고수 : {{ singo[1] }} </span>
-    </div>
-    <div>
-      <img
-        src="./assets/room2.jpg"
-        class="room"
-        @click="modalOpen = !modalOpen"
-      />
-      <h4>{{ products[2] }}</h4>
-      <p>백마넌</p>
-      <button @click="increase2">허위매물신고</button>
-      <span> 신고수 : {{ singo[2] }} </span>
-    </div>
+    <qrcode-stream @decode="onDecode" @init="onInit" />
   </div>
 </template>
 
 <script>
+import { QrcodeStream } from 'vue-qrcode-scanner'
+
 export default {
-  name: "App",
-  data() {
+
+  components: { QrcodeStream },
+
+  data () {
     return {
-      modalOpen: false,
-      products: ["역삼동원룸", "천호동원룸", "마포구원룸"],
-      menus: ["Home", "Shop", "About"],
-      singo: [0, 0, 0],
-    };
+      result: '',
+      error: ''
+    }
   },
+
   methods: {
-    increase() {
-      this.singo[0]++;
+    onDecode (result) {
+      this.result = result
     },
-    increase1() {
-      this.singo[1]++;
-    },
-    increase2() {
-      this.singo[2]++;
-    },
-  },
-  components: {},
-};
+
+    async onInit (promise) {
+      try {
+        await promise
+      } catch (error) {
+        if (error.name === 'NotAllowedError') {
+          this.error = "ERROR: you need to grant camera access permission"
+        } else if (error.name === 'NotFoundError') {
+          this.error = "ERROR: no camera on this device"
+        } else if (error.name === 'NotSupportedError') {
+          this.error = "ERROR: secure context required (HTTPS, localhost)"
+        } else if (error.name === 'NotReadableError') {
+          this.error = "ERROR: is the camera already in use?"
+        } else if (error.name === 'OverconstrainedError') {
+          this.error = "ERROR: installed cameras are not suitable"
+        } else if (error.name === 'StreamApiNotSupportedError') {
+          this.error = "ERROR: Stream API is not supported in this browser"
+        } else if (error.name === 'InsecureContextError') {
+          this.error = 'ERROR: Camera access is only permitted in secure context. Use HTTPS or localhost rather than HTTP.';
+        } else {
+          this.error = `ERROR: Camera error (${error.name})`;
+        }
+      }
+    }
+  }
+}
 </script>
 
-<style>
-@font-face {
-  font-family: "NEXON Lv1 Gothic OTF";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-body {
-  margin: 0;
-}
-div {
-  box-sizing: border-box;
-}
-.default {
-  font-family: "NEXON Lv1 Gothic OTF";
-}
-.black {
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  padding: 20px;
-}
-.white {
-  width: 100%;
-  background: white;
-  border-radius: 8px;
-  padding: 20px;
-}
-.room {
-  width: 100%;
-  margin-top: 40px;
-}
-.menu {
-  background: darkslateblue;
-  padding: 15px;
-  color: white;
-  border-radius: 5px;
-}
-.menu a {
-  color: white;
-  padding: 10px;
-}
-#red {
-  font-size: 50px;
-}
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<style scoped>
+.error {
+  font-weight: bold;
+  color: red;
 }
 </style>
