@@ -20,7 +20,9 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -29,6 +31,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 @font-face {
   font-family: "NEXON Lv1 Gothic OTF";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
@@ -36,10 +39,12 @@ export default {
   font-weight: normal;
   font-style: normal;
 }
+
 .default {
   font-family: "NEXON Lv1 Gothic OTF";
   text-align: center;
 }
+
 img {
   display: block;
   margin: 0px auto;

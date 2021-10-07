@@ -12,7 +12,9 @@
     "bootstrap-vue": "^2.21.2",
     "cache-loader": "^4.1.0",
     "core-js": "^3.6.5",
-    "vue": "^3.2.19"
+    "sass-loader": "^12.1.0",
+    "vue": "^3.2.19",
+    "vue-router": "^3.5.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
