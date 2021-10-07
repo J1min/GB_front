@@ -1,5 +1,5 @@
 <template>
-  <div id="App">
+  <div>
     <Header></Header>
     <Contents></Contents>
     <Footer></Footer>
@@ -21,7 +21,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "node_modules/bootstrap/scss/bootstrap.scss";
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

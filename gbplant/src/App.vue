@@ -1,15 +1,14 @@
 <template>
-  <div id="App">
     <Header></Header>
     <Contents></Contents>
     <Footer></Footer>
-  </div>
 </template>
 
 <script>
 import Header from "./components/Header";
 import Contents from "./components/Contents";
 import Footer from "./components/Footer";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default {
   components: {
@@ -20,17 +19,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
-@import "node_modules/bootstrap/scss/bootstrap.scss";
-
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style>
 
 @font-face {
   font-family: "NEXON Lv1 Gothic OTF";

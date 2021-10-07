@@ -1,11 +1,12 @@
 <template>
   <footer>
-    <div class="foot">
-      {{ comName }}
+    <div class="foot default">
+      © 우리집
     </div>
   </footer>
 </template>
 <script>
+import "bootstrap/dist/css/bootstrap.min.css";
 export default {
   data() {
     return {
