@@ -1,10 +1,13 @@
 <template>
   <div class="default">
     <div v-for="i in contents" :key="i">
-      <div class="room-img"><img :src="i.image" /></div>
+      <div class="room-img default">
+        <img :src="i.image" style="margin: 20px;" />
+      </div>
       {{ i.title }}
       {{ i.price }}
       <br />
+      {{i.content}}
     </div>
   </div>
 </template>
@@ -61,12 +64,13 @@ export default {
   },
 };
 </script>
-<style scoped>
-div {
-  box-sizing: border-box;
-}
+<style>
 .room-img {
-  width: 60%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
+}
+img {
+  display: block;
+  margin: 0px auto;
 }
 </style>

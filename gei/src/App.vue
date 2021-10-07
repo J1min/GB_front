@@ -1,9 +1,7 @@
 <template>
-  <div class="default">
+  <div id="App">
     <Header></Header>
-    <div>
-      <Contents></Contents>
-    </div>
+    <Contents></Contents>
     <Footer></Footer>
   </div>
 </template>
@@ -40,5 +38,10 @@ export default {
 }
 .default {
   font-family: "NEXON Lv1 Gothic OTF";
+  text-align: center;
+}
+img {
+  display: block;
+  margin: 0px auto;
 }
 </style>
