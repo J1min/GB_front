@@ -1,71 +1,88 @@
 <template>
   <div class="default">
-    <div v-for="i in contents" :key="i">
-      <div class="room-img default">
-        <img :src="i.image" style="margin: 20px;" />
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
       </div>
-      {{ i.title }}
-      {{ i.price }}
-      <br />
-      {{i.content}}
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://i.ibb.co/980dVHx/1hu1y.png"
+            class="d-block w-100"
+            alt="https://i.ibb.co/980dVHx/1hu1y.png"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://i.ibb.co/980dVHx/1hu1y.png"
+            class="d-block w-100"
+            alt="https://i.ibb.co/980dVHx/1hu1y.png"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://i.ibb.co/980dVHx/1hu1y.png"
+            class="d-block w-100"
+            alt="https://i.ibb.co/980dVHx/1hu1y.png"
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   </div>
 </template>
 <script>
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap";
+
 export default {
-  
   name: "Contetns",
   data() {
-    return {
-      contents: [
-        {
-          id: 0,
-          title: "Sinrim station 30 meters away",
-          image: "https://codingapple1.github.io/vue/room0.jpg",
-          content: "18년 신축공사한 남향 원룸 ☀️, 공기청정기 제공",
-          price: 340000,
-        },
-        {
-          id: 1,
-          title: "Changdong Aurora Bedroom(Queen-size)",
-          image: "https://codingapple1.github.io/vue/room1.jpg",
-          content: "침실만 따로 있는 공용 셰어하우스입니다. 최대 2인 가능",
-          price: 450000,
-        },
-        {
-          id: 2,
-          title: "Geumsan Apartment Flat",
-          image: "https://codingapple1.github.io/vue/room2.jpg",
-          content: "금산오거리 역세권 아파트입니다. 애완동물 불가능 🐶",
-          price: 780000,
-        },
-        {
-          id: 3,
-          title: "Double styled beds Studio Apt",
-          image: "https://codingapple1.github.io/vue/room3.jpg",
-          content: "무암동인근 2인용 원룸입니다. 전세 전환가능",
-          price: 550000,
-        },
-        {
-          id: 4,
-          title: "MyeongIl Apartment flat",
-          image: "https://codingapple1.github.io/vue/room4.jpg",
-          content: "탄천동 아파트 월세, 남향, 역 5분거리, 허위매물아님",
-          price: 680000,
-        },
-        {
-          id: 5,
-          title: "Banziha One Room",
-          image: "https://codingapple1.github.io/vue/room5.jpg",
-          content: "반지하 원룸입니다. 비올 때 물가끔 새는거 빼면 좋아요",
-          price: 370000,
-        },
-      ],
-    };
+    return {};
   },
 };
 </script>
+<script href="/static/bootstrap.js"></script>
 <style>
 .room-img {
   width: 100%;

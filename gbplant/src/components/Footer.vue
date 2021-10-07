@@ -9,9 +9,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 export default {
   data() {
-    return {
-      comName: "© 우리집",
-    };
+    return {};
   },
 };
 </script>
