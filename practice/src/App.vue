@@ -1,62 +1,122 @@
 <template>
-  <div>
-    <p class="error">{{ error }}</p>
+  <div class="default">
+    <div class="black" v-if="modalOpen == true">
+      <div class="white">
+        <h4>상세페이지임</h4>
+        <p>상세내용임</p>
+        <button @click="modalOpen = !modalOpen">닫기</button>
+      </div>
+    </div>
+    <header>
+      <div class="menu">
+        <a v-for="i in menus" :key="i" href="#">{{ i }}</a>
+      </div>
+    </header>
 
-    <p class="decode-result">Last result: <b>{{ result }}</b></p>
+    <div v-for="j in room" :key="j">
+      <img :src="j.image" class="room" @click="modalOpen = !modalOpen" />
+      <h4>{{ j.title }}</h4>
+      <p>{{ j.price }}원</p>
+    </div>
 
-    <qrcode-stream @decode="onDecode" @init="onInit" />
+    <footer style="margin-top: 20px; margin-bottom: 10px; ">
+      © 뱅드림실행위원회
+    </footer>
   </div>
 </template>
 
 <script>
-import { QrcodeStream } from 'vue-qrcode-scanner'
-
+import Vue from "vue";
+import post from "./components/post";
+import Router from "vue-router";
+import HelloWorld from "@/components/HelloWorld"; //메인 컴포넌트 호출
+import List from "@/components/board/List"; //게시판 리스트 컴포넌트 호출
 export default {
-
-  components: { QrcodeStream },
-
-  data () {
+  name: "App",
+  data() {
     return {
-      result: '',
-      error: ''
-    }
+      modalOpen: false,
+      menus: ["Home", "Shop", "About"],
+      singo: [0, 0, 0, 0, 0, 0],
+      room: post,
+    };
   },
-
   methods: {
-    onDecode (result) {
-      this.result = result
+    increase() {
+      this.singo[0]++;
     },
-
-    async onInit (promise) {
-      try {
-        await promise
-      } catch (error) {
-        if (error.name === 'NotAllowedError') {
-          this.error = "ERROR: you need to grant camera access permission"
-        } else if (error.name === 'NotFoundError') {
-          this.error = "ERROR: no camera on this device"
-        } else if (error.name === 'NotSupportedError') {
-          this.error = "ERROR: secure context required (HTTPS, localhost)"
-        } else if (error.name === 'NotReadableError') {
-          this.error = "ERROR: is the camera already in use?"
-        } else if (error.name === 'OverconstrainedError') {
-          this.error = "ERROR: installed cameras are not suitable"
-        } else if (error.name === 'StreamApiNotSupportedError') {
-          this.error = "ERROR: Stream API is not supported in this browser"
-        } else if (error.name === 'InsecureContextError') {
-          this.error = 'ERROR: Camera access is only permitted in secure context. Use HTTPS or localhost rather than HTTP.';
-        } else {
-          this.error = `ERROR: Camera error (${error.name})`;
-        }
-      }
-    }
-  }
-}
+    increase1() {
+      this.singo[1]++;
+    },
+    increase2() {
+      this.singo[2]++;
+    },
+    increase3() {
+      this.singo[3]++;
+    },
+    increase4() {
+      this.singo[4]++;
+    },
+    increase5() {
+      this.singo[5]++;
+    },
+  },
+  components: {},
+};
 </script>
 
-<style scoped>
-.error {
-  font-weight: bold;
-  color: red;
+<style>
+@font-face {
+  font-family: "NEXON Lv1 Gothic OTF";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  margin: 0;
+}
+div {
+  box-sizing: border-box;
+}
+.default {
+  font-family: "NEXON Lv1 Gothic OTF";
+}
+.black {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  padding: 20px;
+}
+.white {
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+.room {
+  width: 100%;
+  margin-top: 40px;
+}
+.menu {
+  background: darkslateblue;
+  padding: 15px;
+  color: white;
+  border-radius: 5px;
+}
+.menu a {
+  color: white;
+  padding: 10px;
+}
+#red {
+  font-size: 50px;
+}
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
 }
 </style>
