@@ -8,6 +8,7 @@
     >
       Primary
     </button>
+    <img src="https://codingapple1.github.io/vue/room0.jpg" />
   </div>
 </template>
 <script>

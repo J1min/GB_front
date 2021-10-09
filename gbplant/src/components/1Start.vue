@@ -1,29 +1,25 @@
 <template>
-  <div id="btn">
-    <img src="https://ifh.cc/g/hrTQxT.png" />
-  </div>
-  <div id="text">
-    <p>MODEL 3 등록</p>
+  <div id="text" style="margin-top:50px; margin-bottom:30px; ">
+    <h3>MODEL 3 등록</h3>
   </div>
   <div id="stus"></div>
   <div id="obj1">
-    <img
-      src="https://ifh.cc/g/hxU5er.png"
-      width="170px"
-      height="170px"
-      onclick="/choose"
-    />
-  </div>
-  <div id="obj2">
-    <img width="170px" height="170px" onclick="/choose" />
+    <router-link to="/choose"
+      ><img
+        src="https://ifh.cc/g/hxU5er.png"
+        style="width: 170px; height:170px;  margin-right:20px;"
+    /></router-link>
+    <router-link to="/choose"
+      ><img
+        src="https://i.ibb.co/WyRnvSs/497393.png"
+        style="width: 170px; height:170px; margin-left:20px;"
+    /></router-link>
   </div>
   <div id="main">
-    <h1 style="text-align: center"><b>식물 상태</b></h1>
+    <h1 style="text-align: center; margin-top:50px;"><b>식물 상태</b></h1>
     <h2 style="text-align: center"><b>선택해주세요!</b></h2>
   </div>
-  <div id="sub">
-    <h3 style="text-align: center"><u>일반적인 상태에요!</u></h3>
-  </div>
+  <div id="sub"></div>
   <div
     id="bu"
     style="
@@ -33,9 +29,7 @@
         align-items: center;
         justify-content: center;
       "
-  >
-    <button class="btn">다음으로</button>
-  </div>
+  ></div>
 </template>
 <script>
 export default {
