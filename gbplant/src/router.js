@@ -1,7 +1,8 @@
 import { createWebHistory, createRouter } from "vue-router";
 // import Vue from "vue";
 // import Router from "vue-router";
-import Start from './components/1Start';
+import Main from "./components/Main";
+import Start from "./components/1Start";
 import Choose from "./components/2ChoosePlant";
 // 필수
 
@@ -9,17 +10,17 @@ const routes = [
   {
     path: "/",
     name: "Main",
-    component: "Main",
+    component: Main,
   },
 
   {
-    path: "/Start",
+    path: "/start",
     name: "Start",
     component: Start,
   },
 
   {
-    path: "/Choose",
+    path: "/choose",
     name: "Choose",
     component: Choose,
   },
@@ -34,5 +35,5 @@ const routes = [
 
 export const router = createRouter({
   history: createWebHistory(),
-  routes
-})
+  routes,
+});

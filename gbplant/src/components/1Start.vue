@@ -7,10 +7,15 @@
   </div>
   <div id="stus"></div>
   <div id="obj1">
-    <img width="170px" height="170px" onclick="location.href='2.html'" />
+    <img
+      src="https://ifh.cc/g/hxU5er.png"
+      width="170px"
+      height="170px"
+      onclick="/choose"
+    />
   </div>
   <div id="obj2">
-    <img width="170px" height="170px" onclick="location.href='2.html'" />
+    <img width="170px" height="170px" onclick="/choose" />
   </div>
   <div id="main">
     <h1 style="text-align: center"><b>식물 상태</b></h1>

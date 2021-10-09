@@ -1,21 +1,14 @@
 <template>
   <div>
-    <Header></Header>
     <router-view />
-    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 export default {
-  components: {
-    Header,
-    Footer,
-  },
+  components: {},
 };
 </script>
 
@@ -28,13 +21,9 @@ export default {
   font-style: normal;
 }
 
-.default {
+body {
   font-family: "NEXON Lv1 Gothic OTF";
   text-align: center;
 }
 
-img {
-  display: block;
-  margin: 0px auto;
-}
 </style>

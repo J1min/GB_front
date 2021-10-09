@@ -35,6 +35,10 @@ h3 {
   border-radius: 50%;
   border: 3px solid rgb(179, 179, 179);
 }
+#dddd {
+  text-align: center;
+}
+/*
 #sangdv {
   position: absolute;
   left: 535px;
@@ -65,9 +69,7 @@ h3 {
   top: 328px;
   left: 885px;
 }
-#dddd {
-  text-align: center;
-}
+
 #aaeeaeaeaeaeae {
   position: absolute;
   top: 400px;
@@ -128,3 +130,4 @@ h3 {
   top: 662px;
   left: 885px;
 }
+*/
