@@ -1,0 +1,130 @@
+p {
+  font-size: 28px;
+}
+h1 {
+  font-size: 45px;
+}
+h2 {
+  font-size: 15px;
+}
+h3 {
+  font-size: 20px;
+  color: rgb(181, 181, 181);
+}
+#sang {
+  text-align: center;
+}
+#text {
+  position: relative;
+  bottom: 8px;
+}
+#btn {
+  position: absolute;
+  left: 5px;
+  top: 15px;
+}
+#main {
+  position: relative;
+  top: 15px;
+}
+#sub {
+  position: relative;
+  top: -15px;
+}
+#sang {
+  border-radius: 50%;
+  border: 3px solid rgb(179, 179, 179);
+}
+#sangdv {
+  position: absolute;
+  left: 535px;
+  top: 230px;
+}
+#tomadv {
+  position: absolute;
+  left: 705px;
+  top: 230px;
+}
+#sangtx {
+  position: absolute;
+  left: 565px;
+  top: 328px;
+}
+#tomatx {
+  position: absolute;
+  left: 730px;
+  top: 328px;
+}
+#bitdv {
+  position: absolute;
+  top: 230px;
+  left: 865px;
+}
+#bittx {
+  position: absolute;
+  top: 328px;
+  left: 885px;
+}
+#dddd {
+  text-align: center;
+}
+#aaeeaeaeaeaeae {
+  position: absolute;
+  top: 400px;
+  left: 535px;
+}
+#aeae {
+  position: absolute;
+  top: 492px;
+  left: 560px;
+}
+#aeaeasdas {
+  position: absolute;
+  top: 400px;
+  left: 710px;
+}
+#aeaess {
+  position: absolute;
+  top: 492px;
+  left: 740px;
+}
+#dididi {
+  position: absolute;
+  top: 400px;
+  left: 860px;
+}
+#dkssa {
+  position: absolute;
+  top: 492px;
+  left: 885px;
+}
+#lkskl {
+  position: absolute;
+  top: 570px;
+  left: 530px;
+}
+#fdklflsggg {
+  position: absolute;
+  top: 662px;
+  left: 565px;
+}
+#gangbj {
+  position: absolute;
+  top: 570px;
+  left: 710px;
+}
+#gangtx {
+  position: absolute;
+  top: 662px;
+  left: 730px;
+}
+#peperobj {
+  position: absolute;
+  top: 570px;
+  left: 860px;
+}
+#pepertx {
+  position: absolute;
+  top: 662px;
+  left: 885px;
+}
