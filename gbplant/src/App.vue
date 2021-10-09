@@ -25,5 +25,4 @@ body {
   font-family: "NEXON Lv1 Gothic OTF";
   text-align: center;
 }
-
 </style>
