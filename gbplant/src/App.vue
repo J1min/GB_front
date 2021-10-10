@@ -3,11 +3,12 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
-export default {
+export default defineComponent ({
   components: {},
-};
+});
 </script>
 
 <style>

@@ -2,7 +2,7 @@
   <div style="text-align: center;">
     <h1>Machine 1</h1>
 
-      ><img
+      <img
         src="https://i.ibb.co/CBGC1rV/arrow1.png"
         style="width: 40px; height: 40px"
         alt="arrow1"

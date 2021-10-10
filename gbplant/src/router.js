@@ -5,6 +5,7 @@ import Main from "./components/Main";
 import Start from "./components/1Start";
 import Choose from "./components/2ChoosePlant";
 import QR from "./components/QR.vue";
+import JSQR from "./components/QR.js"
 import PB1 from "./components/PB1";
 import PB2 from "./components/PB2";
 import PB3 from "./components/PB3";
@@ -89,6 +90,11 @@ const routes = [
     path: "/scan",
     name: "QRScan",
     component: QR,
+  },
+  {
+    path: "/jsscan",
+    name: "jsQRScan",
+    component: JSQR,
   },
 ];
 
