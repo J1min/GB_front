@@ -4,18 +4,17 @@ import { createWebHistory, createRouter } from "vue-router";
 import Main from "./components/Main";
 import Start from "./components/1Start";
 import Choose from "./components/2ChoosePlant";
-import PB1 from "./components/PB1"
-import PB2 from "./components/PB2"
-import PB3 from "./components/PB3"
-import PB4 from "./components/PB4"
-import PB5 from "./components/PB5"
-import PB6 from "./components/PB6"
-import PB7 from "./components/PB7"
-import PB8 from "./components/PB8"
-import PB9 from "./components/PB9"
-import Plant1 from "./components/Plant1"
-
-// 필수
+import QR from "./components/QR.vue";
+import PB1 from "./components/PB1";
+import PB2 from "./components/PB2";
+import PB3 from "./components/PB3";
+import PB4 from "./components/PB4";
+import PB5 from "./components/PB5";
+import PB6 from "./components/PB6";
+import PB7 from "./components/PB7";
+import PB8 from "./components/PB8";
+import PB9 from "./components/PB9";
+import Plant1 from "./components/Plant1";
 
 const routes = [
   {
@@ -86,15 +85,12 @@ const routes = [
     name: "plant",
     component: Plant1,
   },
-
+  {
+    path: "/scan",
+    name: "QRScan",
+    component: QR,
+  },
 ];
-
-// 이렇게 해도 된다.
-// const router = createRouter({
-//   history: createWebHistory(),
-//   routes,
-// });
-// export default router;
 
 export const router = createRouter({
   history: createWebHistory(),

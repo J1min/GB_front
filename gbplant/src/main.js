@@ -1,9 +1,11 @@
 import { createApp } from "vue";
-import { router } from "./router"; // 라우터 추가하고
+import { router } from "./router";
 import App from "./App.vue";
+import QrReader from "vue3-qr-reader";
 
-// Create Vue Instance
 const app = createApp(App);
 
-app.use(router); // 사용 설정 하기
+app.use(router);
 app.mount("#app");
+app.use(QrReader);
+
