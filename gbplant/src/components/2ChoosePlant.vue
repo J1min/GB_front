@@ -20,84 +20,86 @@
   </div>
   <div class="wrap">
     <div>
-      <img
-        id="sang"
-        src="https://i.ibb.co/yBzB8YY/image.png"
-        style="width:100px; height:100px"
-        onclick="location.href='plantbook9.html'"
-      />
+      <router-link to="/choose/info1">
+        <img
+          id="sang"
+          src="https://i.ibb.co/yBzB8YY/image.png"
+          style="width:100px; height:100px"
+        />
+      </router-link>
       <h2>상추</h2>
     </div>
     <div>
-      <img
-        id="sang"
-        src="https://i.ibb.co/PjBwXxx/image.png"
-        style="width:100px; height:100px"
-        onclick="location.href='plantbook9.html'"
-      />
+      <router-link to="/choose/info2">
+        <img
+          id="sang"
+          src="https://i.ibb.co/PjBwXxx/image.png"
+          style="width:100px; height:100px"
+        />
+      </router-link>
       <h2>토마토</h2>
     </div>
     <div>
-      <img
-        id="sang"
-        src="https://i.ibb.co/G0yv4JX/image.png"
-        style="width:100px; height:100px"
-        onclick="location.href='plantbook9.html'"
-      />
+      <router-link to="/choose/info3">
+        <img
+          id="sang"
+          src="https://i.ibb.co/G0yv4JX/image.png"
+          style="width:100px; height:100px"
+      /></router-link>
       <h2>비트</h2>
     </div>
     <div>
-      <img
-        id="sang"
-        src="https://i.ibb.co/zn44VRH/image.png"
-        style="width:100px; height:100px"
-        onclick="location.href='plantbook9.html'"
-      />
+      <router-link to="/choose/info4">
+        <img
+          id="sang"
+          src="https://i.ibb.co/zn44VRH/image.png"
+          style="width:100px; height:100px"
+      /></router-link>
       <h2>당근</h2>
     </div>
     <div>
-      <img
-        id="sang"
-        src="https://i.ibb.co/Sx3r5gN/image.png"
-        style="width:100px; height:100px"
-        onclick="location.href='plantbook9.html'"
-      />
+      <router-link to="/choose/info5">
+        <img
+          id="sang"
+          src="https://i.ibb.co/Sx3r5gN/image.png"
+          style="width:100px; height:100px"
+      /></router-link>
       <h2>쪽파</h2>
     </div>
     <div>
-      <img
-        id="sang"
-        src="https://i.ibb.co/TgMKr4k/4139319.png"
-        style="width:100px; height:100px"
-        onclick="location.href='plantbook9.html'"
-      />
+      <router-link to="/choose/info6">
+        <img
+          id="sang"
+          src="https://i.ibb.co/TgMKr4k/4139319.png"
+          style="width:100px; height:100px"
+      /></router-link>
       <h2>대파</h2>
     </div>
     <div>
-      <img
-        id="sang"
-        src="https://i.ibb.co/yBzB8YY/image.png"
-        style="width:100px; height:100px"
-        onclick="location.href='plantbook9.html'"
-      />
+      <router-link to="/choose/info7">
+        <img
+          id="sang"
+          src="https://i.ibb.co/yBzB8YY/image.png"
+          style="width:100px; height:100px"
+      /></router-link>
       <h2>상추</h2>
     </div>
     <div>
-      <img
-        id="sang"
-        src="https://i.ibb.co/BVSzrbr/image.png"
-        style="width:100px; height:100px"
-        onclick="location.href='plantbook9.html'"
-      />
+      <router-link to="/choose/info8">
+        <img
+          id="sang"
+          src="https://i.ibb.co/BVSzrbr/image.png"
+          style="width:100px; height:100px"
+      /></router-link>
       <h2>배추</h2>
     </div>
     <div>
-      <img
-        id="sang"
-        src="https://i.ibb.co/1XtQFF5/5501202.png"
-        style="width:100px; height:100px"
-        onclick="location.href='plantbook9.html'"
-      />
+      <router-link to="/choose/info9">
+        <img
+          id="sang"
+          src="https://i.ibb.co/1XtQFF5/5501202.png"
+          style="width:100px; height:100px"
+      /></router-link>
       <h2>강낭콩</h2>
     </div>
   </div>

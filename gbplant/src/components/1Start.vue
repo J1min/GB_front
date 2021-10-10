@@ -15,8 +15,9 @@
         style="width: 170px; height:170px; margin-left:20px;"
     /></router-link>
   </div>
+  <br><h1> <b style="margin-right:180px;"> 씨앗 </b>        <b> 모종 </b></h1>
   <div id="main">
-    <h1 style="text-align: center; margin-top:50px;"><b>식물 상태</b></h1>
+    <h1 style="text-align: center; margin-top:50px;"><b>식물 상태를</b></h1>
     <h2 style="text-align: center"><b>선택해주세요!</b></h2>
   </div>
   <div id="sub"></div>
