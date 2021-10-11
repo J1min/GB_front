@@ -5,7 +5,7 @@ import Main from "./components/Main";
 import Start from "./components/1Start";
 import Choose from "./components/2ChoosePlant";
 import QR from "./components/QR.vue";
-import JSQR from "./components/QR.js"
+import w404 from "./components/OnError";
 import PB1 from "./components/PB1";
 import PB2 from "./components/PB2";
 import PB3 from "./components/PB3";
@@ -16,6 +16,7 @@ import PB7 from "./components/PB7";
 import PB8 from "./components/PB8";
 import PB9 from "./components/PB9";
 import Plant1 from "./components/Plant1";
+import Plant2 from "./components/Plant2";
 
 const routes = [
   {
@@ -23,7 +24,11 @@ const routes = [
     name: "Main",
     component: Main,
   },
-
+  {
+    path: "/404",
+    name: "404",
+    component: w404,
+  },
   {
     path: "/start",
     name: "Start",
@@ -87,14 +92,18 @@ const routes = [
     component: Plant1,
   },
   {
+    path: "/my/plant2",
+    name: "plant2",
+    component: Plant2,
+  },
+  {
     path: "/scan",
     name: "QRScan",
     component: QR,
   },
   {
-    path: "/jsscan",
-    name: "jsQRScan",
-    component: JSQR,
+    path: "/:pathMatch(.*)*",
+    redirect: "/404",
   },
 ];
 

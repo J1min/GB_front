@@ -1,4 +1,5 @@
 <template>
+<div>
   <div>
     <h2 style="text-align: center; margin-top:30px;"><b>식물 선택하기</b></h2>
   </div>
@@ -102,6 +103,7 @@
       /></router-link>
       <h2>강낭콩</h2>
     </div>
+  </div>
   </div>
 </template>
 <script>
