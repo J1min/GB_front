@@ -1,0 +1,38 @@
+#photo {
+  width: 280px;
+  height: 420px;
+  margin: auto;
+}
+#photo img {
+  width: 240px;
+  height: 450px;
+}
+h1 {
+  font-size: 15px;
+  height: 10px;
+}
+h2 {
+  text-align: center;
+  height: 10px;
+}
+h3 {
+  font-size: 40px;
+  padding: 0;
+  height: 100px;
+  margin: 0;
+}
+#under img {
+  width: 350px;
+}
+img {
+  width: 70px;
+}
+#photo2 {
+  width: 280px;
+  height: 420px;
+  margin: auto;
+}
+#photo2 img {
+  width: 240px;
+  height: 400px;
+}

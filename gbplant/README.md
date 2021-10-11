@@ -1,4 +1,4 @@
-# plant13
+# gbplant
 
 ## Project setup
 ```
