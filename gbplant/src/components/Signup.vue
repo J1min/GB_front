@@ -24,11 +24,8 @@
       <input type="password" class="form" id="exampleInputPassword1" />
     </div>
     <div class="mb-3 form-check"></div>
-    <button
-      type="submit"
-      class="btn btn-success thebutton"
-      onclick="location.href='/login'"
-    >
+    <button class="btn btn-success thebutton" onclick="location.href='/login'">
+      <!--type="submit"-->
       회원가입
     </button>
   </form>

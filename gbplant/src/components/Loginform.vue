@@ -19,10 +19,9 @@
     </div>
     <div class="mb-3 form-check"></div>
     <button
-      type="submit"
       class="btn btn-success thebutton"
       onclick="location.href='/my/plant1'"
-    >
+    > <!--type="submit"-->
       로그인하기
     </button>
   </form>
