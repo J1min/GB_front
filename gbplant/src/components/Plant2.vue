@@ -1,14 +1,14 @@
 <template>
   <div style="text-align: center;">
     <div>
-    <h1>Machine 2</h1>
-    <button
-      type="button"
-      class="btn btn-outline-danger mb-2"
-      onclick="location.href='/scan'"
-    >
-      새 기기 등록
-    </button>
+      <h1 class="mt-5">Machine 2</h1>
+      <button
+        type="button"
+        class="btn btn-outline-danger mb-2"
+        onclick="location.href='/scan'"
+      >
+        새 기기 등록
+      </button>
     </div>
     <router-link to="/my/plant1">
       <img

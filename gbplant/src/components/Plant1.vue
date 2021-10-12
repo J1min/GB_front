@@ -1,7 +1,7 @@
 <template>
   <div style="text-align: center;">
     <div>
-    <h1>Machine 1</h1>
+    <h1 class="mt-5">Machine 1</h1>
     <button
       type="button"
       class="btn btn-outline-danger mb-2"
