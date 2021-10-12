@@ -1,9 +1,9 @@
 import { createWebHistory, createRouter } from "vue-router";
-// import Vue from "vue";
-// import Router from "vue-router";
 import Main from "./components/Main";
 import Start from "./components/1Start";
 import Choose from "./components/2ChoosePlant";
+import Login from "./components/Loginform";
+import Signup from "./components/Signup";
 import QR from "./components/QR.vue";
 import w404 from "./components/OnError";
 import PB1 from "./components/PB1";
@@ -100,6 +100,16 @@ const routes = [
     path: "/scan",
     name: "QRScan",
     component: QR,
+  },
+  {
+    path: "/login",
+    name: "Login",
+    component: Login,
+  },
+  {
+    path: "/signup",
+    name: "Signup",
+    component: Signup,
   },
   {
     path: "/:pathMatch(.*)*",
