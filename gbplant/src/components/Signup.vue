@@ -18,15 +18,19 @@
       <input type="password" class="form mb-3" id="exampleInputPassword1" />
     </div>
     <div class="mb-3">
-      <label
-        for="exampleInputPassword1"
-        class="form-label me-3 mb-5"
+      <label for="exampleInputPassword1" class="form-label me-3 mb-5"
         >다시 입력</label
       >
       <input type="password" class="form" id="exampleInputPassword1" />
     </div>
     <div class="mb-3 form-check"></div>
-    <button type="submit" class="btn btn-success thebutton" onclick="location.href='/login'">회원가입</button>
+    <button
+      type="submit"
+      class="btn btn-success thebutton"
+      onclick="location.href='/login'"
+    >
+      회원가입
+    </button>
   </form>
 </template>
 <script>
