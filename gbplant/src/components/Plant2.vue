@@ -30,7 +30,7 @@
       />
     </router-link>
     <h3>식물이 잘 자라고 있어요!</h3>
-    <h1 class="now">온도:30°C, 습도:50%, 광량:30</h1>
+    <h1 class="now">온도:35°C, 습도:20%, 광량:60</h1>
     <img
       src="https://i.ibb.co/PhjhwZ7/1.png"
       style="width: 60px; height: 60px; margin-right: 50px;"
