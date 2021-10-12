@@ -20,7 +20,7 @@
     <div class="mb-3 form-check"></div>
     <button
       type="button"
-      class="btn btn-outline-danger thebutton mb-2"
+      class="btn btn-outline-primary thebutton mb-2"
       onclick="location.href='/my/plant1'"
     >
       로그인
