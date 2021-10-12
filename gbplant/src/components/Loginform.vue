@@ -19,10 +19,11 @@
     </div>
     <div class="mb-3 form-check"></div>
     <button
-      class="btn btn-success thebutton"
+      type="button"
+      class="btn btn-outline-danger thebutton mb-2"
       onclick="location.href='/my/plant1'"
-    > <!--type="submit"-->
-      로그인하기
+    >
+      로그인
     </button>
   </form>
 </template>
