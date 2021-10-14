@@ -4,23 +4,31 @@
     <div class="mb-3" style="margin-top:100px;">
       <label for="exampleInputEmail1" class="form-label me-3">ID</label>
       <input
-        type="email"
+        type="text"
+        v-model="ID"
         class="form"
         id="exampleInputEmail1"
         aria-describedby="emailHelp"
         style="margin-left: 58px;"
       />
+      <br />
+      <span>value: {{ ID }}</span>
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label me-3"
         >Password</label
       >
-      <input type="password" class="form" id="exampleInputPassword1" />
+      <input
+        type="password"
+        v-model="PW"
+        class="form"
+        id="exampleInputPassword1"
+      />
     </div>
-    <div class="mb-3 form-check"></div>
+    <span>value: {{ PW }}</span> <br />
     <button
       type="button"
-      class="btn btn-outline-primary thebutton mb-2"
+      class="btn btn-outline-primary thebutton mb-2 mt-5"
       onclick="location.href='/my/plant1'"
     >
       로그인
@@ -28,7 +36,15 @@
   </form>
 </template>
 <script>
-export default {};
+
+export default {
+  data() {
+    return {
+      ID: "",
+      PW: "",
+    };
+  },
+};
 </script>
 <style scope>
 .form {

@@ -1,13 +1,4 @@
 <template>
-  <div>
-    <input type="text" id="jack" v-model="checkedNames" /> <br>
-    <span>value: {{ checkedNames }}</span>
-  </div>
+  <p>식물 1 페이지</p>
 </template>
-<script>
-export default {
-  data() {
-    return { checkedNames: "" };
-  },
-};
-</script>
+<script></script>

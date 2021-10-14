@@ -21,6 +21,7 @@
     "react": "^17.0.2",
     "react-qr-reader": "^2.2.1",
     "vue": "^3.0.0",
+    "vue-axios": "^3.3.7",
     "vue-barcode-reader": "0.0.3",
     "vue-loader": "^15.9.8",
     "vue-router": "^4.0.11",

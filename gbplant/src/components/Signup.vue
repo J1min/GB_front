@@ -10,20 +10,20 @@
         id="exampleInputEmail1"
         aria-describedby="emailHelp"
         style="margin-left: 18px;"
-        v-model="message1"
+        v-model="ID"
         placeholder="입력하세요."
       />
-      <p>message: {{ message1 }}</p>
+      <p>Value: {{ ID }}</p>
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label me-3">이름</label>
       <input
-        v-model="message2"
+        v-model="Name"
         placeholder="입력하세요."
         type="text"
         class="form mb-3"
       />
-      <p>message: {{ message2 }}</p>
+      <p>Value: {{ Name }}</p>
     </div>
     <div class="mb-3">
       <label
@@ -33,54 +33,68 @@
         >닉네임</label
       >
       <input
-        v-model="message3"
+        v-model="Nick"
         placeholder="입력하세요."
         type="text"
         class="form mb-3"
       />
-      <p>message: {{ message3 }}</p>
+      <p>Value: {{ Nick }}</p>
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label me-3"
         >비밀번호</label
       >
       <input
-        v-model="message22"
+        v-model="PW"
         placeholder="입력하세요."
         type="password"
         class="form mb-3"
       />
-      <p>message: {{ message22 }}</p>
+      <p>Value: {{ PW }}</p>
     </div>
     <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label me-3 mb-5"
+      <label for="exampleInputPassword1" class="form-label me-3"
         >다시 입력</label
       >
-      <input type="password" class="form" id="exampleInputPassword1" />
+      <input
+        type="password"
+        class="form"
+        id="exampleInputPassword1"
+        v-model="Check"
+      />
+      <p class="mb-5">Value: {{ Check }}</p>
     </div>
-    <div class="mb-3 form-check"></div>
+
     <button
       type="button"
       class="btn btn-outline-primary thebutton mb-2"
-      onclick="location.href='/login'"
+      @click="getList()"
     >
       회원가입
     </button>
   </form>
-  <!--
-    <input v-model="message" placeholder="입력하세요.">
-      <p>message: {{ message }}</p>
-  -->
 </template>
-<script>
-export default {};
-// var bang = Vue.createApp({
-//   data() {
-//     return {
-//       message: "",
-//     };
-//   },
-// }).mount("#v-model-basic");
+<script language="javascript">
+export default {
+  data() {
+    return {
+      ID: "",
+      PW: "",
+      Name: "",
+      Nick: "",
+      Check: "",
+    };
+  },
+  methods: {
+    getList() {
+      this.axios
+        .post("http://211.216.92.115:5000/GB/register", { id: this.ID })
+        .then((res) => {
+          console.log(res);
+        });
+    },
+  },
+};
 </script>
 <style scope>
 .form {
