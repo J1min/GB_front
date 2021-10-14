@@ -1,6 +1,7 @@
 <template>
   <form style="text-align: center;">
     <h1 style="margin-top:100px;">GB 회원가입</h1>
+
     <div class="mb-3" style="margin-top:100px;">
       <label for="exampleInputEmail1" class="form-label me-3">아이디</label>
       <input
@@ -9,13 +10,47 @@
         id="exampleInputEmail1"
         aria-describedby="emailHelp"
         style="margin-left: 18px;"
+        v-model="message1"
+        placeholder="입력하세요."
       />
+      <p>message: {{ message1 }}</p>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label me-3">이름</label>
+      <input
+        v-model="message2"
+        placeholder="입력하세요."
+        type="text"
+        class="form mb-3"
+      />
+      <p>message: {{ message2 }}</p>
+    </div>
+    <div class="mb-3">
+      <label
+        for="exampleInputPassword1"
+        class="form-label me-3"
+        aria-placeholder="닉네임을 입력하세요"
+        >닉네임</label
+      >
+      <input
+        v-model="message3"
+        placeholder="입력하세요."
+        type="text"
+        class="form mb-3"
+      />
+      <p>message: {{ message3 }}</p>
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label me-3"
         >비밀번호</label
       >
-      <input type="password" class="form mb-3" id="exampleInputPassword1" />
+      <input
+        v-model="message22"
+        placeholder="입력하세요."
+        type="password"
+        class="form mb-3"
+      />
+      <p>message: {{ message22 }}</p>
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label me-3 mb-5"
@@ -32,9 +67,20 @@
       회원가입
     </button>
   </form>
+  <!--
+    <input v-model="message" placeholder="입력하세요.">
+      <p>message: {{ message }}</p>
+  -->
 </template>
 <script>
 export default {};
+// var bang = Vue.createApp({
+//   data() {
+//     return {
+//       message: "",
+//     };
+//   },
+// }).mount("#v-model-basic");
 </script>
 <style scope>
 .form {
