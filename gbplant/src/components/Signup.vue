@@ -87,11 +87,11 @@ export default {
   },
   methods: {
     getList() {
+      const usrid = { title: "Vue POST Request Example" };
       this.axios
-        .post("http://211.216.92.115:5000/GB/register", { id: this.ID })
-        .then((res) => {
-          console.log(res);
-        });
+        .post("http://211.216.92.115:5000/GB/register", { id: usrid })
+        .then((res) => (this.id = res.data.ID));
+      console.log("뱅드림 화이팅 !!");
     },
   },
 };
