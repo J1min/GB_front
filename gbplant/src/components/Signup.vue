@@ -64,13 +64,11 @@ export default {
         password: this.password,
         name: this.name,
       };
-      axios
-        .post("http://211.216.92.115:5000/GB/register", info)
-        .then((response) => {
-          this.id = response.data.isLogin;
-          this.password = response.data.isLogin;
-          this.name = response.data.isLogin;
-        });
+      axios.post("http://211.216.92.115:5000/GB/register", info).then(() => {
+        this.id = null;
+        this.password = null;
+        this.name = null;
+      });
     },
   },
 };
