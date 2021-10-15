@@ -10,88 +10,40 @@
         id="exampleInputEmail1"
         aria-describedby="emailHelp"
         style="margin-left: 18px;"
-        v-model="ID"
+        v-model="articleId"
         placeholder="입력하세요."
       />
-      <p>Value: {{ ID }}</p>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label me-3">이름</label>
-      <input
-        v-model="Name"
-        placeholder="입력하세요."
-        type="text"
-        class="form mb-3"
-      />
-      <p>Value: {{ Name }}</p>
-    </div>
-    <div class="mb-3">
-      <label
-        for="exampleInputPassword1"
-        class="form-label me-3"
-        aria-placeholder="닉네임을 입력하세요"
-        >닉네임</label
-      >
-      <input
-        v-model="Nick"
-        placeholder="입력하세요."
-        type="text"
-        class="form mb-3"
-      />
-      <p>Value: {{ Nick }}</p>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label me-3"
-        >비밀번호</label
-      >
-      <input
-        v-model="PW"
-        placeholder="입력하세요."
-        type="password"
-        class="form mb-3"
-      />
-      <p>Value: {{ PW }}</p>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label me-3"
-        >다시 입력</label
-      >
-      <input
-        type="password"
-        class="form"
-        id="exampleInputPassword1"
-        v-model="Check"
-      />
-      <p class="mb-5">Value: {{ Check }}</p>
+      <p>Value: {{ articleId }}</p>
     </div>
 
     <button
       type="button"
+      id="btn"
       class="btn btn-outline-primary thebutton mb-2"
-      @click="getList()"
+      @click="signIn"
     >
       회원가입
     </button>
   </form>
 </template>
-<script language="javascript">
+<script>
+import axios from "axios";
+
 export default {
+  name: "post-request",
   data() {
     return {
-      ID: "",
-      PW: "",
-      Name: "",
-      Nick: "",
-      Check: "",
+      articleId: null,
     };
   },
   methods: {
-    getList() {
-      const usrid = { title: "Vue POST Request Example" };
-      this.axios
-        .post("http://211.216.92.115:5000/GB/register", { id: usrid })
-        .then((res) => (this.id = res.data.ID));
-      console.log("뱅드림 화이팅 !!");
+    signIn() {
+      const article = { id: this.articleId , password: "임시비번"};
+      axios
+        .post("http://211.216.92.115:5000/GB/register", article)
+        .then((response) => {
+          this.articleId = response.data.isLogin;
+        });
     },
   },
 };
