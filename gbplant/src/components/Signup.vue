@@ -10,12 +10,31 @@
         id="exampleInputEmail1"
         aria-describedby="emailHelp"
         style="margin-left: 18px;"
-        v-model="articleId"
+        v-model="id"
         placeholder="입력하세요."
       />
-      <p>Value: {{ articleId }}</p>
+      <p>Value: {{ id }}</p>
     </div>
-
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label me-3">이름</label>
+      <input
+        v-model="password"
+        placeholder="입력하세요."
+        type="text"
+        class="form mb-3"
+      />
+      <p>Value: {{ password }}</p>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label me-3">이름</label>
+      <input
+        v-model="name"
+        placeholder="입력하세요."
+        type="text"
+        class="form mb-3"
+      />
+      <p>Value: {{ name }}</p>
+    </div>
     <button
       type="button"
       id="btn"
@@ -33,16 +52,24 @@ export default {
   name: "post-request",
   data() {
     return {
-      articleId: null,
+      id: null,
+      password: null,
+      name: null,
     };
   },
   methods: {
     signIn() {
-      const article = { id: this.articleId , password: "임시비번"};
+      const info = {
+        id: this.id,
+        password: this.password,
+        name: this.name,
+      };
       axios
-        .post("http://211.216.92.115:5000/GB/register", article)
+        .post("http://211.216.92.115:5000/GB/register", info)
         .then((response) => {
-          this.articleId = response.data.isLogin;
+          this.id = response.data.isLogin;
+          this.password = response.data.isLogin;
+          this.name = response.data.isLogin;
         });
     },
   },
