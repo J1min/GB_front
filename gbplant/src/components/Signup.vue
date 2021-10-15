@@ -15,16 +15,7 @@
       />
       <p>Value: {{ id }}</p>
     </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label me-3">이름</label>
-      <input
-        v-model="password"
-        placeholder="입력하세요."
-        type="text"
-        class="form mb-3"
-      />
-      <p>Value: {{ password }}</p>
-    </div>
+
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label me-3">이름</label>
       <input
@@ -34,6 +25,38 @@
         class="form mb-3"
       />
       <p>Value: {{ name }}</p>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label me-3">닉넴</label>
+      <input
+        v-model="nickname"
+        placeholder="입력하세요."
+        type="text"
+        class="form mb-3"
+      />
+      <p>Value: {{ nickname }}</p>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label me-3">비번</label>
+      <input
+        v-model="password"
+        placeholder="입력하세요."
+        type="text"
+        class="form mb-3"
+      />
+      <p>Value: {{ password }}</p>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label me-3"
+        >비번 확인</label
+      >
+      <input
+        v-model="passcheck"
+        placeholder="입력하세요."
+        type="text"
+        class="form mb-3"
+      />
+      <p>Value: {{ passcheck }}</p>
     </div>
     <button
       type="button"
@@ -54,6 +77,8 @@ export default {
     return {
       id: null,
       password: null,
+      passcheck: null,
+      nickname: null,
       name: null,
     };
   },
@@ -63,12 +88,26 @@ export default {
         id: this.id,
         password: this.password,
         name: this.name,
+        nickname: this.nickname,
       };
-      axios.post("http://211.216.92.115:5000/GB/register", info).then(() => {
-        this.id = null;
-        this.password = null;
-        this.name = null;
-      });
+      if (this.password !== this.passcheck) {
+        alert("비번이 틀렸다");
+      } else {
+        axios
+          .post("http://211.216.92.115:5000/GB/register", info)
+          .then((res) => {
+            if (res.data.isRegister === true) {
+              location.href = "/login";
+            } else {
+              alert("다른 아이디로 회원가입 하세요 ㅅㄱ");
+            }
+            this.id = null; // res.data.isRegister 로 확인
+            this.password = null;
+            this.passcheck = null;
+            this.name = null;
+            this.nickname = null;
+          });
+      }
     },
   },
 };
