@@ -1,7 +1,0 @@
-print('hello world')
-print('hello', end="")
-print('world')
-print('hello', 'world')
-print('hello' + 'world')
-print('hello')
-print('world')
