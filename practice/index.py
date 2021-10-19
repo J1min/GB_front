@@ -1,6 +1,5 @@
-n,m = input().split()
+# n = input()
+# n = int(n)
+# for i in n:
 
-if n=='0' and m=='0':
-  print(True)
-else:
-  print("False")  
+#   print(i)
