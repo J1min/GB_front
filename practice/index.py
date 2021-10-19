@@ -1,5 +1,2 @@
-# n = input()
-# n = int(n)
-# for i in n:
-
-#   print(i)
+a = list(range(1, 10, 2))
+print(a)
