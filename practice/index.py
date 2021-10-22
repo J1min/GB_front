@@ -1,2 +1,6 @@
-a = list(range(1, 10, 2))
-print("list",a);
+tp = (1, 2, 3, 4)
+lst = ['a', 'b', 'c', 'd']
+
+합친거 = dict(zip(tp, lst));
+
+print(합친거)
