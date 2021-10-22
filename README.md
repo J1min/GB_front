@@ -1,2 +1,1 @@
-### GB_front
-html / css / js / vue
+HTML5 / CSS / JS + Vue.js + Axios
