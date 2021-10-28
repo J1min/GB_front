@@ -13,7 +13,6 @@
         v-model="id"
         placeholder="입력하세요."
       />
-      <p>Value: {{ id }}</p>
     </div>
 
     <div class="mb-3">
@@ -24,7 +23,6 @@
         type="text"
         class="form mb-3"
       />
-      <p>Value: {{ name }}</p>
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label me-3">닉넴</label>
@@ -34,7 +32,6 @@
         type="text"
         class="form mb-3"
       />
-      <p>Value: {{ nickname }}</p>
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label me-3">비번</label>
@@ -44,7 +41,6 @@
         type="text"
         class="form mb-3"
       />
-      <p>Value: {{ password }}</p>
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label me-3"
@@ -56,7 +52,6 @@
         type="text"
         class="form mb-3"
       />
-      <p>Value: {{ passcheck }}</p>
     </div>
     <button
       type="button"

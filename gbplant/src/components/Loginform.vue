@@ -5,14 +5,13 @@
       <label for="exampleInputEmail1" class="form-label me-3">ID</label>
       <input
         type="text"
-        v-model="ID"
+        v-model="id"
         class="form"
         id="exampleInputEmail1"
         aria-describedby="emailHelp"
         style="margin-left: 58px;"
       />
       <br />
-      <span>value: {{ ID }}</span>
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label me-3"
@@ -20,29 +19,44 @@
       >
       <input
         type="password"
-        v-model="PW"
+        v-model="password"
         class="form"
         id="exampleInputPassword1"
       />
     </div>
-    <span>value: {{ PW }}</span> <br />
     <button
       type="button"
       class="btn btn-outline-primary thebutton mb-2 mt-5"
-      onclick="location.href='/my/plant1'"
+      @click="signIn"
     >
       로그인
     </button>
   </form>
 </template>
+
 <script>
+import axios from "axios";
 
 export default {
+  name: "post-request",
   data() {
     return {
-      ID: "",
-      PW: "",
+      id: null,
+      password: null,
     };
+  },
+  methods: {
+    signIn() {
+      const info = {
+        id: this.id,
+        password: this.password,
+      };
+      axios.post("http://211.216.92.115:5000/GB/register", info).then(() => {
+        location.href = "/my/plant1";
+        this.id = null; // res.data.isRegister 로 확인
+        this.password = null;
+      });
+    },
   },
 };
 </script>
