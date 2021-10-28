@@ -16,3 +16,4 @@ for i in 기온:
   sum1 = sum1 + i  
 
 print(f'평균은{sum1/len(기온):.2f} 도')  
+# 자구 알고 ㅈㄴ어렵네 ㅋㅋ
