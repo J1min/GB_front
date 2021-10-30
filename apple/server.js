@@ -17,3 +17,5 @@ app.get("/pet", function (req, res) {
 app.get("/beauty", function (req, res) {
   res.sendFile(__dirname + "/beauty.html");
 });
+
+// 주석
