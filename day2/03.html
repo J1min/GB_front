@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      .txt {
+        line-height: 25px;
+    font-size: 15px;
+        word-spacing: 50px; /* 이건 쉽게 말하면 띄어쓰기 증폭 */
+        letter-spacing: 10px; /*이건 그냥 글자 하나하나 띄움 */
+        /* 행간값과 글자크기를 합친 것을 행간으로 적용 */
+      }
+      .txt2 {
+        line-height: 1.5;
+        font-size: 12px;
+      }
+      .btn {
+        display: block;
+        width: 60px;
+        height: 20px;
+        background-color: #777777;
+        text-indent: -6999px;
+      }
+      .text_box {
+        background: #f1f;
+        text-align: center;
+      }
+      .text_box2 {
+        display: block;
+        text-align: center;
+        background: #f1f;
+      }
+      .btn2 {
+        font-size: 20px;
+        text-decoration: none;
+      }
+      .btn2:hover {
+        /* 가상선택자 (만약~~한다면 이렇게 해라) */
+        text-decoration: overline;
+      }
+      .btn2:active {
+        /* 가상선택자 (만약~~한다면 이렇게 해라) */
+        text-decoration: line-through;
+      }
+      /* .tf01 {
+        
+      } */
+      .tf02 {
+        text-transform: uppercase;
+      }
+      .tf03 {
+        text-transform:lowercase;
+      }
+      .tf04 {
+        text-transform:capitalize
+      }
+    </style>
+  </head>
+  <body>
+    <p class="txt">
+      문단 태그 입니다<br />
+      문단태그입니다<br />
+      문단태그입니다<br />
+      문단태그입니다<br />
+      문단태그입니다
+    </p>
+    <p class="txt2">
+      문단태그입니다<br />
+      문단태그입니다<br />
+      문단태그입니다<br />
+      문단태그입니다<br />
+      문단태그입니다
+    </p>
+    <p class="text_box">text</p>
+    <span class="text_box2">text</span>
+    <a href="#" class="btn2">버튼</a>
+    <br />
+    <br />
+    <br />
+    <br />
+    <p class="tf01">abcdef</p>
+    <p class="tf02">abcdef</p>
+    <p class="tf03">abcdef</p>
+    <p class="tf04">abcdef</p>
+  </body>
+</html>

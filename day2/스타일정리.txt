@@ -1,0 +1,57 @@
+<font관련스타일>
+font-style : 끌꼴
+font-family : 기울임꼴 등등 글자스타일
+font-varient : small-caps 크기가 작은 대문자
+font-weight : 글자 굵기
+font-size : 숫자em(상위엘리먼트크기에배수), 숫자pt, 숫자px (유전xx) 
+
+<text관련스타일>
+line-height 숫자em 숫자 퍼센트 : 줄간격 
+text-indent 숫자em 숫자 퍼센트 : 들여쓰기, 음수사용기 내어쓰기
+text-align : left right center justify : 텍스트나 이미지 수평정렬(자신의안(자신의자식요소)에다가정렬을해줌 기본적으로 가로크기가 필요하다.)
+text-decoration : 줄긋기(underline overline line-throught none)
+letter-spacing 숫자em 숫자 : 글자 간격
+word-spacing (단어와 단어사이의 간격)
+text-transform : 영문자변환(capitalize) 첫글자만대문자(uppercase) 소문자(lowercase)
+vertical-align baseline, sup, sub, middle, text-top: 수직으로정렬
+
+<색상배경관련스타일>
+color (영문자 RGB 등등 )글자 및 밑줄 색
+backgrond-color : 배경색(영문자 RGB 등등)
+backgrond-repeat : repeat, repeat-x, repeat-y, no-repeat (배경반복여부)
+backgrond-attachment : scroll, fixed (화면이 스크롤될때 이동여부)
+backgrond-position : top, bottom, left, center, right, 가로%, 세로% : 이미지 반복 여부 가로p 세로p(음수도 쓰기 ㄱㄴ)
+
+<위치를설정하는타입>
+float: 배치
+float: left 요소를왼쪽배치
+float: right 요소를오른쪽배치
+** 가운데 정렬은 margin:0 auto; <<<
+
+clear: float속성 무시하고 덮어씌워버리는 속성
+clear: left 
+clear: right
+
+margin: 0 //테두리기준 바깥여백
+margin: 0 0 //마진의 세로 가로 
+margin: 0 0 0 //위 좌우 아래
+margin: 0 0 0 0 //top right bottom left
+margin-top, margin-left, margin-bottom, margin-left 하나하나 마진을 적용할 때
+
+padding: 0 //테두리기준 안여백
+padding: 0 0 //패딩의 세로 가로 
+padding: 0 0 0 //위 좌우 아래
+padding: 0 0 0 0 //top right bottom left
+padding-top, padding-left, padding-bottom, padding-left 하나하나 패딩을 적용할 때
+
+position: 요소를내가원하는곳에배치
+
+top right left bottom 가능(기본적으로 left right를 사용)
+****position들을 특정기준으로 할 때는 
+    특정영역의 클래스나 아이디에게 position: relative; 쓰면 됨ㅇㅇ
+
+    position: absolute; 절대값으로 원하는 위치에 배치
+    position: relative; 상대적(다른요소의영향을받음)
+    position: fixed; 원하는위치에고정해서배치
+    position: static; 문서의흐름에맞춰서배치
+    
