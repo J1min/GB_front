@@ -18,4 +18,10 @@ app.get("/beauty", function (req, res) {
   res.sendFile(__dirname + "/beauty.html");
 });
 
-// 주석
+app.get("/write", function (req, res) {
+  res.sendFile(__dirname + "/write.html");
+});
+
+app.post("/add", function(req, res) {
+  
+})

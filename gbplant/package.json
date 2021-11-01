@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build": "vue-cli-service build"
   },
   "dependencies": {
     "@popperjs/core": "^2.10.2",
@@ -14,7 +13,7 @@
     "bootstrap": "^5.0.0-beta3",
     "bootstrap-vue-3": "0.0.4",
     "cache-loader": "^4.1.0",
-    "core-js": "^3.6.5",
+    "core-js": "^3.6.5", 
     "express": "^4.17.1",
     "path": "^0.12.7",
     "qrcode-reader-vue3": "^3.1.2",
