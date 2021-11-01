@@ -51,11 +51,14 @@ export default {
         id: this.id,
         password: this.password,
       };
-      axios.post("http://211.216.92.115:5000/GB/login", info).then(() => {
-        
-        location.href = "/my/plant1";
-        this.id = null; // res.data.isRegister 로 확인
-        this.password = null;
+      axios.post("http://211.216.92.115:5000/GB/login", info).then((req) => {
+        if (req.data.loginSuccess === true) {
+          location.href = "/my/plant1";
+          this.id = null; // res.data.isRegister 로 확인
+          this.password = null;
+        } else {
+          alert("아디비번이 틀렸씁니다");
+        }
       });
     },
   },
