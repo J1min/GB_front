@@ -1,9 +1,14 @@
 const express = require("express");
 const app = express();
 const port = 8080;
-
-app.listen(port, function () {
-  console.log(`listening on ${port}`);
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: true }));
+const MongoClient = require("mongodb").MongoClient;
+  
+MongoClient.connect("mongodb+srv://admin:qwer1234@cluster0.rjy7d.mongodb.net/apple?retryWrites=true&w=majority", function (err, client) {
+  app.listen(port, function () {
+    console.log(`listening on ${port}`);
+  });
 });
 
 app.get("/", function (req, res) {
@@ -22,6 +27,8 @@ app.get("/write", function (req, res) {
   res.sendFile(__dirname + "/write.html");
 });
 
-app.post("/add", function(req, res) {
-  
-})
+app.post("/add", function (req, res) {
+  res.send("전송완료");
+  console.log(req.body.title);
+  console.log(req.body.date);
+});

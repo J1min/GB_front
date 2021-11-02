@@ -51,7 +51,8 @@ export default {
         id: this.id,
         password: this.password,
       };
-      axios.post("http://211.216.92.115:5000/GB/login", info).then((req) => {
+      axios.post("https://211.216.92.115:5000/GB/login", info).then((req) => {
+        console.log(req.data.loginSuccess);
         if (req.data.loginSuccess === true) {
           location.href = "/my/plant1";
           this.id = null; // res.data.isRegister 로 확인
