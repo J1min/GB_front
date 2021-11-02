@@ -8,7 +8,8 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     />
-    <title>Document</title>
+    <title>글이나함써보자</title>
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -88,9 +89,28 @@
         </div>
         <div class="form-group">
           <label>날짜</label>
-          <input type="text" class="form-control" name="date" />
+          <input
+            type="date"
+            class="form-control"
+            name="date"
+            id="currentDate"
+          />
         </div>
-        <button type="submit" class="btn btn-outline-secondary">Submit</button>
+        <button
+          style="
+            text-align: center;
+            margin: auto;
+            display: block;
+            width: 400px;
+            height: 200px;
+            margin-top: 100px;
+            font-size: 50px;
+          "
+          type="submit"
+          class="btn btn-outline-secondary"
+        >
+          등록
+        </button>
       </form>
     </div>
 
@@ -111,3 +131,8 @@
     ></script>
   </body>
 </html>
+<script>
+  document.getElementById("currentDate").value = new Date()
+    .toISOString()
+    .substring(0, 10);
+</script>

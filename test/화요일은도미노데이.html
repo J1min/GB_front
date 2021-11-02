@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>회원 가입</title>
+    <!-- <link rel="stylesheet" href="css/register2.css"> -->
+    <style>
+      * {
+        /* 모든 요소 선택 */
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: #ccc;
+        padding: 20px;
+      }
+
+      #signup {
+        /* form 아이디를 signup으로 설정 예정 */
+        background: white;
+        border: 1px solid black;
+        border-radius: 5px; /* [문1]. 테두리를 둥글게 */
+        padding: 20px;
+        width: 400px;
+        margin: 30px auto; /* [문2]. 마진을 이용해 위아래30px, 가운데 정렬 */
+      }
+
+      #signup fieldset {
+        border: 1px solid #ccc;
+        margin-bottom: 30px;
+      }
+
+      #signup legend {
+        font-size: 16px;
+        font-weight: bold;
+        padding-left: 5px;
+        padding-bottom: 10px;
+      }
+
+      #signup ul li {
+        line-height: 30px;
+        list-style: none; /* [문3]. 리스트 스타일 없음으로 설정 */
+        padding: 5px 10px;
+        margin-bottom: 2px;
+      }
+
+      #signup button {
+        border: 1px solid #222;
+        border-radius: 20px;
+        display: block; /* [문4].블록속성으로 변환*/
+        font-size: 16px;
+        letter-spacing: 1px;
+        margin: auto;
+        padding: 7px 25px;
+      }
+
+      #signup label {
+        float: left; /* [문5]. 왼쪽으로 배치 */
+        font-size: 13px; /* 글자 크기 : 13px */
+        width: 110px; /* 너비 : 110px */
+      }
+
+      /* #signup input[type=text], #signup input[type=password], #signup input[type=tel], #signup input[type=email] {  속성 선택자 사용 */
+      #signup input:not([type="radio"]) {
+        /* input type이 radio 아닌것 선택 */
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 13px; /* 텍스트 필드 안의 글자 크기 지정 */
+        padding: 5px; /* 텍스트 필드와 내용 사이의 패딩 지정 */
+        width: 200px; /* 텍스트 필드 너비 지정 */
+      }
+
+      #signup input[required] {
+        /* [문6]. 필수 입력 필드의 스타일  */
+        border: 1px red solid;
+      }
+
+      #signup input[readonly] {
+        /* [문7].읽기 전용 필드의 스타일 */
+        border: none;
+      }
+      #signup button:hover {
+        /* 버튼에 마우스를 올렸을때 가상 선택자 */
+        background-color: midnightblue; /*배경색*/
+        color: white; /* 글자색*/
+      }
+    </style>
+  </head>
+  <body>
+    <form id="signup">
+      <fieldset>
+        <!--[문8]. form id지정-->
+        <fieldset>
+          <!--[문9]. form요소를 그룹으로 묶기-->
+          <legend>로그인 정보</legend>
+          <!--[문10]. 필드셋의 이름 넣기-->
+          <ul>
+            <!--[문11] 순서가 없는 목록-->
+            <li>
+              <!--[문12] 목록아이템-->
+              <label for="userid">아이디</label>
+              <input id="userid" name="userid" type="text" required autofocus />
+              <!--[문13] 자동 포커스 지정-->
+            </li>
+            <li>
+              <label for="pwd1">비밀번호</label>
+              <input id="pwd1" name="pwd1" type="password" required />
+              <!--[문14] 필수입력-->
+            </li>
+            <li>
+              <label for="pwd2">비밀번호 확인</label>
+              <input id="pwd2" name="pwd2" type="password" required />
+            </li>
+            <li>
+              <label for="level">회원 등급</label>
+              <input
+                id="level"
+                name="level"
+                type="text"
+                readonly
+                value="준회원"
+              />
+              <!--[문15] 값을 "준회원"으로 출력-->
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset />
+        <legend>개인 정보</legend>
+        <ul>
+          <li>
+            <label for="name">이름</label>
+            <!--[문16] 라벨 지정-->
+            <input
+              id="fullname"
+              name="fullname"
+              type="text"
+              placeholder="5자미만 공백없이"
+              required
+            />
+            <!--[문17] 힌트입력-->
+          </li>
+          <li>
+            <label for="email">메일 주소</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="abcd@domain.com"
+              required
+              autocomplete="off"
+            />
+          </li>
+          <li>
+            <label for="tel">연락처</label>
+            <input id="tel" name="tel" type="tel" autocomplete="off" />
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <button type="submit">제출</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

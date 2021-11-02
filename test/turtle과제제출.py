@@ -9,15 +9,15 @@ def petal():
     t.left(80)
 # 꽃 그리기
 def draw_flower(petal_num):
+
   for i in range(petal_num):
+    t.begin_fill()
     petal()
     t.left(360/petal_num)
+    t.end_fill()
     t.dot(50,"yellow") # 수술 그리기 
-
-n = int(input())
+    t.ht()
+n = int(t.textinput('꽃그리기','꽃잎의 갯수'))
 
 draw_flower(n)
-
-t.end_fill()
-
 t.mainloop()
