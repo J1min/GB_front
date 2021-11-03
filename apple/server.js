@@ -7,15 +7,6 @@ const MongoClient = require("mongodb").MongoClient;
 app.set("view engine", "ejs");
 
 // app.set("view", "./views");/
-var cnt = 0;
-app.post("/add", function (req, res) {
-  var info = { _id: cnt, 할일: req.body.title, 날짜: req.body.date };
-  res.sendFile(__dirname + "/ok.html");
-  db.collection("data").insertOne(info, function (err, res) {
-    console.log("저장완료");
-  });
-  cnt++;
-});
 
 var db;
 MongoClient.connect(
@@ -29,6 +20,25 @@ MongoClient.connect(
     });
   }
 );
+app.post("/add", function (req, res) {
+  db.collection("count").findOne(
+    { name: "게시물갯수" },
+    function (err, result) {
+      var totalCount = result.count;
+      console.log(totalCount);
+      var info = {
+        _id: totalCount + 1,
+        할일: req.body.title,
+        날짜: req.body.date,
+      };
+      db.collection("data").insertOne(info, function (err, res) {
+        console.log("저장완료");
+      });
+    }
+  ); // 데이터를 1개만 찾는 부분
+
+  res.sendFile(__dirname + "/ok.html");
+});
 
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/index.html");
