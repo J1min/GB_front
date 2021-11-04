@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="name" onkeyup="printName()" />
+    <div id="result"></div>
+    <span id="text-conter"></span>
+  </body>
+</html>
+<script>
+  function printName() {
+    const name = document.getElementById("name").value;
+    document.getElementById("result").innerText = name;
+  }
+
+  document.getElementById("text-conter").innerText = text.length;
+</script>
