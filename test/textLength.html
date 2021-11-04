@@ -7,16 +7,34 @@
     <title>Document</title>
   </head>
   <body>
-    <input id="name" onkeyup="printName()" />
+    <textarea id="textarea" onkeyup="printName();"> </textarea>
     <div id="result"></div>
     <span id="text-conter"></span>
+    <span id="nonspace-conter"></span>
   </body>
 </html>
 <script>
   function printName() {
-    const name = document.getElementById("name").value;
-    document.getElementById("result").innerText = name;
-  }
+    var $result = document.getElementById("result");
+    var $textCounter = document.getElementById("text-conter");
+    var $textarea = document.getElementById("textarea");
 
-  document.getElementById("text-conter").innerText = text.length;
+    const textarea = $textarea.value;
+    $result.innerText = textarea;
+    $textCounter.innerText = textarea.length;
+
+    var $nonspace = document.getElementById("nonspace-conter");
+    var nonspace = 0;
+    var text = $textarea.innerText;
+    var regex = /\s/gi;
+    // 또는
+    // var regex = / /gi;
+
+    text.replace(regex, ""); // 'abcde'
+    console.log(text);
+    // if (textarea !== "\u00A0") {
+    //   nonspace += 1;
+    // }
+    $nonspace.innerText = text.length;
+  }
 </script>

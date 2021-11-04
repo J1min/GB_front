@@ -27,8 +27,11 @@ app.get("/write", function (req, res) {
 });
 
 app.get("/list", function (req, res) {
-  console.log(result);
-  res.render("list.ejs", { data: result });
+  db.collection("data")
+    .find()
+    .toArray(function (err, result) {
+      res.render("list.ejs", { data: result });
+    });
 });
 
 app.post("/add", function (req, res) {
