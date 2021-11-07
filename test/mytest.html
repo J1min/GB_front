@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="name" onkeyup="printName()" />
+    <div id="result"></div>
+    <div id="real"></div>
+  </body>
+</html>
+
+<script>
+  function printName() {
+    $name = document.getElementById("name");
+    $result = document.getElementById("result");
+    $real = document.getElementById("real");
+
+    const name = $name.value;
+    $result.innerText = name.length;
+    name1 = name.replaceAll(" ", "");
+    console.log(name)
+    console.log(name1)
+    $real.innerText = name1.length;
+  }
+</script>
