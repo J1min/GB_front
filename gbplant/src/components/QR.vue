@@ -3,22 +3,20 @@
     <h1 class="mb-2">MacAdress를 인식해주세요.</h1>
     <div class="stream">
       <qr-stream @decode="onDecode" class="mb">
-        <div style="color: red;" class="frame"></div>
+        <div style="color: red" class="frame"></div>
       </qr-stream>
     </div>
     <h2 class="result mt-5">MacAdress: {{ data }}</h2>
-    <button
-      type="button"
-      class="btn btn-outline-danger mb-2"
-      onclick="location.href='/start'"
-    >
-      일단넘어가기(개발자용)
+    <button type="button" class="btn btn-outline-danger mb-2" @click="signIn" v-if="data">
+      다음
     </button>
   </div>
 </template>
 <script>
 import { QrStream } from "vue3-qr-reader";
 import { defineComponent, reactive, toRefs } from "vue";
+import axios from "axios";
+
 export default defineComponent({
   name: "QrStreamExample",
   components: {
@@ -35,6 +33,16 @@ export default defineComponent({
       ...toRefs(state),
       onDecode,
     };
+  },
+  methods: {
+    signIn() {
+      const info = {
+        data: this.data
+      };
+      axios.post("https://211.216.92.115:5000/GB/login", info).then(() => {
+        location.href="/start"
+      });
+    },
   },
 });
 </script>
