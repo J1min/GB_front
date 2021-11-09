@@ -1,5 +1,9 @@
 <template>
   <form style="text-align: center;">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
     <h1 style="margin-top:100px;">GB 아이디로 로그인</h1>
     <div class="mb-3" style="margin-top:100px;">
       <label for="exampleInputEmail1" class="form-label me-3">ID</label>
