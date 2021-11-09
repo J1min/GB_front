@@ -7,7 +7,12 @@
       </qr-stream>
     </div>
     <h2 class="result mt-5">MacAdress: {{ data }}</h2>
-    <button type="button" class="btn btn-outline-danger mb-2" @click="signIn" v-if="data">
+    <button
+      type="button"
+      class="btn btn-outline-danger mb-2"
+      @click="signIn"
+      v-if="data"
+    >
       다음
     </button>
   </div>
@@ -37,10 +42,10 @@ export default defineComponent({
   methods: {
     signIn() {
       const info = {
-        data: this.data
+        data: this.data,
       };
-      axios.post("https://211.216.92.115:5000/GB/login", info).then(() => {
-        location.href="/start"
+      axios.post("http://211.216.92.115:5000/GB/login", info).then(() => {
+        location.href = "/start";
       });
     },
   },

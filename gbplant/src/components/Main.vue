@@ -1,6 +1,9 @@
 <template>
   <div>
-    <h1 class="mt-5 mb-5">마루야마 아야 화이팅</h1>
+    <h1 class="mt-5 mb-5"><p>당신을 인증하기 위해</p>
+    <p>먼저 로그인하세요</p></h1>
+    
+
     <button
       type="button"
       class="btn btn-outline-success"
