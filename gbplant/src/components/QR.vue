@@ -54,6 +54,6 @@ export default defineComponent({
 <style>
 .stream {
   text-align: center;
-  border: 5px solid red;
+  border: 6px solid red;
 }
 </style>
