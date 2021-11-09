@@ -1,5 +1,9 @@
 <template>
   <div>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
     <h1 class="mb-2">기기의 MacAdress(바코드)를 인식해주세요.</h1>
     <div class="stream">
       <qr-stream @decode="onDecode" class="mb">
