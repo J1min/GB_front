@@ -6,7 +6,7 @@
         <div style="color: red" class="frame"></div>
       </qr-stream>
     </div>
-    <h2 class="result mt-5">MacAdress: {{ data }}</h2>
+    <h2 class="result mt-5">해당 기기의 MacAdress: {{ data }}</h2>
     <button
       type="button"
       class="btn btn-outline-danger mb-2"
