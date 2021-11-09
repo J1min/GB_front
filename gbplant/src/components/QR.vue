@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="mb-2">MacAdress를 인식해주세요.</h1>
+    <h1 class="mb-2">기기의 MacAdress(바코드)를 인식해주세요.</h1>
     <div class="stream">
       <qr-stream @decode="onDecode" class="mb">
         <div style="color: red" class="frame"></div>
