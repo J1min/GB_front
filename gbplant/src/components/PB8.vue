@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>배추세부</div>
+    <div>강낭콩세부</div>
     <router-link to="/my/plant1">
       <button type="button" class="btn btn-outline-success">시작하기</button>
     </router-link>

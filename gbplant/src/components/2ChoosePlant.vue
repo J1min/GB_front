@@ -103,6 +103,15 @@
       /></router-link>
       <h2>강낭콩</h2>
     </div>
+    <!-- <div>
+      <router-link to="/choose/info9">
+        <img
+          id="sang"
+          src="https://i.ibb.co/1XtQFF5/5501202.png"
+          style="width:100px; height:100px"
+      /></router-link>
+      <h2>강낭콩</h2>
+    </div> -->
   </div>
   </div>
 </template>

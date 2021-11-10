@@ -17,7 +17,7 @@ import PB8 from "./components/PB8";
 import PB9 from "./components/PB9";
 import Plant1 from "./components/Plant1";
 import Plant2 from "./components/Plant2";
-
+import test from "./components/forChoosePlant";
 const routes = [
   {
     path: "/",
@@ -110,6 +110,11 @@ const routes = [
     path: "/signup",
     name: "Signup",
     component: Signup,
+  },
+  {
+    path: "/test",
+    name: "Test",
+    component: test,
   },
   {
     path: "/:pathMatch(.*)*",

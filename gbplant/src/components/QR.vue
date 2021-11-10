@@ -10,7 +10,7 @@
     <button
       type="button"
       class="btn btn-outline-danger mb-2"
-      @click="signIn"
+      @click="islogin, signIn"
       v-if="data"
     >
       다음
@@ -40,12 +40,19 @@ export default defineComponent({
     };
   },
   methods: {
+    isLogin() {
+      axios.post("http://211.216.92.115:5000/GB/auth").then((res) => {
+        if (res.data.isAuth) location.href = "/";
+      });
+    },
     signIn() {
       const info = {
         data: this.data,
       };
-      axios.post("http://211.216.92.115:5000/GB/add", info).then(() => {
-        location.href = "/start";
+      axios.post("http://211.216.92.115:5000/GB/add1", info).then((req) => {
+        if (req.data.success) {
+          location.href = "/start";
+        }
       });
     },
   },
