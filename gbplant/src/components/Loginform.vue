@@ -1,37 +1,39 @@
 <template>
-  <form style="text-align: center;">
-    <h1 style="margin-top:100px;">GB 아이디로 로그인</h1>
-    <div class="mb-3" style="margin-top:100px;">
-      <label for="exampleInputEmail1" class="form-label me-3">ID</label>
-      <input
-        type="text"
-        v-model="id"
-        class="form"
-        id="exampleInputEmail1"
-        aria-describedby="emailHelp"
-        style="margin-left: 58px;"
-      />
-      <br />
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label me-3"
-        >Password</label
+  <div>
+    <form style="text-align: center;">
+      <h1 style="margin-top:100px;">GB 아이디로 로그인</h1>
+      <div class="mb-3" style="margin-top:100px;">
+        <label for="exampleInputEmail1" class="form-label me-3">ID</label>
+        <input
+          type="text"
+          v-model="id"
+          class="form"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          style="margin-left: 58px;"
+        />
+        <br />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label me-3"
+          >Password</label
+        >
+        <input
+          type="password"
+          v-model="password"
+          class="form"
+          id="exampleInputPassword1"
+        />
+      </div>
+      <button
+        type="button"
+        class="btn btn-outline-primary thebutton mb-2 mt-5"
+        @click="signIn"
       >
-      <input
-        type="password"
-        v-model="password"
-        class="form"
-        id="exampleInputPassword1"
-      />
-    </div>
-    <button
-      type="button"
-      class="btn btn-outline-primary thebutton mb-2 mt-5"
-      @click="signIn"
-    >
-      로그인
-    </button>
-  </form>
+        로그인
+      </button>
+    </form>
+  </div>
 </template>
 
 <script>

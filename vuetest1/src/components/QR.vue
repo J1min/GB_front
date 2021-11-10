@@ -45,7 +45,7 @@ export default defineComponent({
         data: this.data,
       };
       axios.post("http://211.216.92.115:5000/GB/add", info).then(() => {
-        location.href = "/start";
+        location.href = "https://gitplant.netlify.app/start";
       });
     },
   },
