@@ -1,7 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Main from "./components/Main";
 import Start from "./components/1Start";
-import Choose from "./components/2ChoosePlant";
+// import Choose from "./components/2ChoosePlant";
 import Login from "./components/Loginform";
 import Signup from "./components/Signup";
 import QR from "./components/QR.vue";
@@ -35,11 +35,11 @@ const routes = [
     component: Start,
   },
 
-  {
-    path: "/choose",
-    name: "Choose",
-    component: Choose,
-  },
+  // {
+  //   path: "/choose",
+  //   name: "Choose",
+  //   component: Choose,
+  // },
 
   {
     path: "/choose/info1",
@@ -112,8 +112,8 @@ const routes = [
     component: Signup,
   },
   {
-    path: "/test",
-    name: "Test",
+    path: "/choose",
+    name: "ForChoosePlant",
     component: test,
   },
   {
