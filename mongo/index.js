@@ -26,7 +26,7 @@ app.get("/write", function (req, res) {
   res.sendFile(__dirname + "/write.html");
 });
 
-app.get("/list", function (req, res) {
+app.get("/#list", function (req, res) {
   db.collection("data")
     .find()
     .toArray(function (err, result) {
