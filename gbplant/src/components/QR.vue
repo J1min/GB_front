@@ -10,7 +10,7 @@
     <button
       type="button"
       class="btn btn-outline-danger mb-2"
-      @click="islogin, signIn"
+      @click="send"
       v-if="data"
     >
       다음
@@ -40,18 +40,20 @@ export default defineComponent({
     };
   },
   methods: {
-    isLogin() {
-      axios.post("http://211.216.92.115:5000/GB/auth").then((res) => {
-        if (res.data.isAuth) location.href = "/";
-      });
-    },
-    signIn() {
+    // isLogin() {
+    //   axios.post("http://211.216.92.115:5000/GB/auth").then((res) => {
+    //     if (res.data.isAuth) location.href = "/";
+    //   });
+    // },
+    send() {
       const info = {
-        data: this.data,
+        macadress: this.data,
       };
-      axios.post("http://211.216.92.115:5000/GB/add1", info).then((req) => {
-        if (req.data.success) {
+      axios.post("http://211.216.92.115:5000/GB/Firstadd", info).then((req) => {
+        if (req.data.passed === true) {
           location.href = "/start";
+        } else if (req.data.passed === false) {
+          alert("사용중인거나 틀림");
         }
       });
     },
