@@ -84,6 +84,7 @@
   background-color: blueviolet;
 }
 .banner > ul {
+  margin: 0 0 0 0;
 }
 .banner > ul > li {
   margin-top: 40px;

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼문만들기</title>
+    <style>
+      input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 5px 10px;
+        background-color: #ccc;
+        margin: 5px 0;
+      }
+      input[type="text"] {
+        border-radius: 10px;
+      }
+      input[type="text"]:focus {
+        background-color: #000;
+      }
+      input[type="password"] {
+        border: none;
+        background-color: #fff;
+        border-bottom: 2px solid #000;
+      }
+      input[type="radio"],
+      input [type="checkbox"] {
+        width: 5%;
+      }
+      select {
+        width: 100px;
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 5px 0;
+        color: #fff;
+        border: 2px solid #000;
+        background-color: #ccc;
+      }
+      textarea {
+        width: 100%;
+        height: 200px;
+        border: 1px dashed #000;
+        padding: 10px;
+        font-size: 10px;
+      }
+      input[type="button"],
+      input[type="reset"],
+      input[type="submit"] {
+        background-color: #000;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <p>
+        <label>아이디</label>
+        <input type="text" maxlength="20" size="20" placeholder="아이디" />
+      </p>
+      <p>
+        <label>비밀의번호 </label>
+        <input type="password" maxlength="20" size="20" placeholder="비번" />
+      </p>
+      <p>
+        <label>남자 <input type="radio" name="gender" /></label>
+        <label>여자 <input type="radio" name="gender" /></label>
+      </p>
+      <p>
+        취미
+        <label> 독서 <input type="checkbox" /></label>
+        <label> 음악감상 <input type="checkbox" /></label>
+        <label> 뱅드림 <input type="checkbox" /></label>
+      </p>
+      <p>검색 <input type="search" /></p>
+      <p>
+        지겁
+        <select name="" id="">
+          <option value="선택 ㄱ">ㅇ1ㅇ</option>
+          <option value="">ㅇ2ㅇ</option>
+          <option value="">ㅇ3ㅇ</option>
+          <option value="">ㅇ4ㅇ</option>
+        </select>
+      </p>
+      <p>
+        <textarea cols="23" rows="100"></textarea>
+      </p>
+      <p>첨부 <input type="file" /></p>
+      <input type="submit" value="전송하기" />
+      <input type="reset" />
+      <!--form 문 내 다 지워주는 기능-->
+      <input type="button" value="돌아가기" />
+      <button></button>
+    </form>
+  </body>
+</html>
