@@ -1,7 +1,5 @@
 <template>
-  <div class="default" style="text-align: center width:50% height:50%">
-    
-  </div>
+  <div class="default" style="text-align: center width:50% height:50%"></div>
 </template>
 <script>
 import "bootstrap/dist/css/bootstrap.min.css";

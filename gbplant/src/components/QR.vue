@@ -10,7 +10,7 @@
     <button
       type="button"
       class="btn btn-outline-danger mb-2"
-      @click="send"
+      @click="submitForm"
       v-if="data"
     >
       다음
@@ -20,7 +20,7 @@
 <script>
 import { QrStream } from "vue3-qr-reader";
 import { defineComponent, reactive, toRefs } from "vue";
-import axios from "axios";
+// import axios from "./axios";
 
 export default defineComponent({
   name: "QrStreamExample",
@@ -45,17 +45,23 @@ export default defineComponent({
     //     if (res.data.isAuth) location.href = "/";
     //   });
     // },
-    send() {
-      const info = {
-        macadress: this.data,
-      };
-      axios.post("http://211.216.92.115:5000/GB/Firstadd", info).then((req) => {
-        if (req.data.passed === true) {
-          location.href = "/start";
-        } else if (req.data.passed === false) {
-          alert("사용중인거나 틀림");
-        }
-      });
+    submitForm() {
+      const formData = new FormData();
+      formData.append("macadress", this.data);
+
+      // const info = {
+      //   macadress: this.data,
+      // };
+      this.axios
+        .post("http://211.216.92.115:5000/GB/Firstadd", formData)
+        .then((req) => {
+          console.log(req.data.passed);
+          if (req.data.passed === true) {
+            location.href = "/start";
+          } else if (req.data.passed === false) {
+            alert("사용중이거나 틀림");
+          }
+        });
     },
   },
 });

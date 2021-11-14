@@ -28,7 +28,7 @@
       <button
         type="button"
         class="btn btn-outline-primary thebutton mb-2 mt-5"
-        @click="signIn"
+        @click="submitForm"
       >
         로그인
       </button>
@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import axios from "axios";
+// import axios from "./axios";
 
 export default {
   name: "post-request",
@@ -48,22 +48,29 @@ export default {
     };
   },
   methods: {
-    signIn() {
-      const info = {
-        id: this.id,
-        password: this.password,
-      };
-      axios.post("http://211.216.92.115:5000/GB/login", info).then((req) => {
-        console.log(req.data.loginSuccess);
-        if (req.data.loginSuccess === true) {
-          location.href = "/scan";
-          this.id = null; // res.data.isRegister 로 확인
-          this.password = null;
-        } else {
-          alert("아디비번이 틀렸씁니다");
-        }
-      });
+    submitForm() {
+      const formData = new FormData();
+      formData.append("id", this.id);
+      formData.append("password", this.password);
+      // const info = {
+      //   id: this.id,
+      //   password: this.password,
+      // };
+      this.axios
+        .post("http://211.216.92.115:5000/GB/login", formData)
+        .then((req) => {
+          console.log(req.data.loginSuccess);
+          if (req.data.loginSuccess === true) {
+            location.href = "/scan";
+            // console.log(req.);
+            this.id = null; // res.data.isRegister 로 확인
+            this.password = null;
+          } else {
+            alert("아디비번이 틀렸씁니다");
+          }
+        });
     },
+    signIn() {},
   },
 };
 </script>
