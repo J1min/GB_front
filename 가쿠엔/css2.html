@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css</title>
+    <style>
+      .box1 {
+        width: 100%;
+        height: 30px;
+        margin-bottom: 20px;
+      }
+      .box1-1 {
+        background-color: #ccc;
+      }
+      .box1-1:hover {
+        display: none;
+      }
+      .box1-2 {
+        background-color: #000;
+      }
+      .box1-2:hover {
+        opacity: 0;
+      }
+      .box1-3 {
+        background-color: #fcf;
+      }
+      .box1-3:hover {
+        visibility: hidden;
+      }
+      .box2 {
+        width: 200px;
+        height: 150px;
+        margin: 0 0 20px 20px;
+        border: 2px solid #000;
+      }
+      .box2-1 {
+        background-color: #de1;
+        border-radius: 5px;
+      }
+      .box2-2 {
+        background-color: #d11;
+        border-radius: 50%;
+      }
+      .box2-3 {
+        background-color: #c24;
+        border-radius: 0 100px 0 100px;
+      }
+      .box2-4 {
+        background-color: green;
+        border-radius: 0 0 100px;
+      }
+      .box2-5 {
+        background-color: blueviolet;
+        border-radius: 50%;
+      }
+      .box3 {
+        width: 200px;
+        height: 100px;
+        background-color: aquamarine;
+        box-shadow: 10px -4px 5px #ccc;
+      }
+
+      .txt1 {
+        font-size: 40px;
+        font-weight: 900;
+        text-shadow: 0 0 4px #ccc, 0 -3px 4px #ff3, 1px -6px 6px #fd3,
+          -1px -9px 11px #f80, 1px -12px 18px #f20;
+      }
+      .box4 {
+        width: 100%;
+        height: 460px;
+        background: url(./main_img.jpg) no-repeat 0 0;
+        background-size: contain;
+        border: 2px solid #000;
+      }
+
+      .box5 {
+        width: 200px;
+        height: 200px;
+        background-color: #ccc;
+        border: 10px solid #000;
+        outline: 5px solid red;
+        outline-offset: -50px;
+      }
+      .box6 {
+        width: 200px;
+        height: 200px;
+        border: 3px solid #000;
+      }
+      .box6-1 {
+        background-color: chartreuse;
+      }
+      .box6-2 {
+        background-color: #000;
+      }
+      .box7 {
+        width: 500px;
+        height: 300px;
+        border: 2px solid #000;
+      }
+      .box7-1 {
+        background: -webkit-linear-gradient(45deg,red 10%, blue 20%, green 50%);
+      }
+      .box7-2 {
+        background: radial-gradient(red, blue)
+      }
+      /* 
+      display: none;  < 이건 그냥 딱 쓰면 존재 자체가 사라짐
+
+      visibility: hidden; < 얘들은 딱 써도 투명해질 뿐 존재는 있음 
+      opacity: 0;  < 
+      */
+    </style>
+  </head>
+  <body>
+    <div class="box1 box1-1"></div>
+    <div class="box1 box1-2"></div>
+    <div class="box1 box1-3"></div>
+    <div class="box2 box2-1"></div>
+    <div class="box2 box2-2"></div>
+    <div class="box2 box2-3"></div>
+    <div class="box2 box2-4"></div>
+    <div class="box2 box2-5"></div>
+    <div class="box3"></div>
+    <h1 class="txt1">Hello World</h1>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="box5"></div>
+    <div class="box6 box6-1">box6-1</div>
+    <div class="box6 box6-2">box6-2</div>
+    <div class="box7 box7-1">box7-1</div>
+    <div class="box7 box7-2">box7-2</div>
+  </body>
+</html>

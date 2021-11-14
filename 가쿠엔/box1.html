@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 6000px;
+      }
+      .box1 {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: green;
+        animation-name: anime1;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      @keyframes anime1 {
+        from {
+          position: absolute;
+          top: 0;
+          left: 0;
+        } /* from */
+        to {
+          position: absolute;
+          top: 500;
+          left: 500;
+        } /* to */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+  </body>
+</html>

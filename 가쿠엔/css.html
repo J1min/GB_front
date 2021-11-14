@@ -7,98 +7,106 @@
     <title>css</title>
     <style>
       .box1 {
-        width: 100%;
-        height: 30px;
+        width: 200px;
+        height: 100px;
         margin-bottom: 20px;
+        cursor: pointer;
+      }
+      .box1-1 .in_box {
+      }
+      .box1-2 .in_box {
+        width: 150px;
+        height: 150px;
+        background-color: orange;
+        transform: scale(1);
+        transition: 0.5s;
+      }
+      .box1-2 .in_box:hover {
+        width: 150px;
+        height: 150px;
+        background-color: orange;
+        transform: scale(1);
+      }
+      .box1:hover .in_box {
+        transform: translate(300px, 0);
+        background-color: #000;
+        transition: 0.7s;
       }
       .box1-1 {
         background-color: #ccc;
       }
-      .box1-1:hover {
-        display: none;
-      }
       .box1-2 {
         background-color: #000;
-      }
-      .box1-2:hover {
-        opacity: 0;
+        transform: scale(0.5);
       }
       .box1-3 {
         background-color: #fcf;
+        transform: rotate(45deg);
       }
-      .box1-3:hover {
-        visibility: hidden;
+      .box1-4 {
+        background-color: #fc2;
+        transition: 90s;
       }
-      .box2 {
-        width: 200px;
-        height: 150px;
-        margin: 0 0 20px 20px;
-        border: 2px solid #000;
+      .box1-4:hover {
+        transform: rotate(360deg);
       }
-      .box2-1 {
-        background-color: #de1;
-        border-radius: 5px;
-      }
-      .box2-2 {
-        background-color: #d11;
-        border-radius: 50%;
-      }
-      .box2-3 {
-        background-color: #c24;
-        border-radius: 0 100px 0 100px;
-      }
-      .box2-4 {
-        background-color: green;
-        border-radius: 0 0 100px;
-      }
-      .box2-5 {
-        background-color: blueviolet;
-        border-radius: 50%;
-      }
-      .box3 {
+      .box1-4:hover .in_box {
         width: 200px;
         height: 100px;
-        background-color: aquamarine;
-        box-shadow: 10px -4px 5px #ccc;
+        transform: skew(-45deg);
       }
-
-      .txt1 {
-        font-size: 40px;
-        font-weight: 900;
-        text-shadow: 0 0 4px #ccc, 0 -3px 4px #ff3, 1px -6px 6px #fd3,
-          -1px -9px 11px #f80, 1px -12px 18px #f20;
+      .box2 {
+        margin: 50px;
+        width: 150px;
+        height: 150px;
+        background-color: #000;
+        transition: 0.5s;
+      }
+      .box2:hover {
+        width: 200px;
+        height: 150px;
+        background-color: blue;
+        transition-delay: 1s;
+        transition-duration: 0.7s;
+        transition-property: all;
+        transition-timing-function: ease-in-out;
+      }
+      .box3 {
+        background-color: #000;
+      }
+      /* .box3:hover + .box4 {
+        background-color: #fcf;
+        transform: translate(100px, 0);
+        transition-duration: 0.7s;
+      } */
+      .box3:hover + .box5 {
+        background-color: #fcf;
+        transform: translate(100px, 0);
+        transition-duration: 0.7s;
       }
       .box4 {
-        width: 100%;
-        height: 460px;
-        background: url(./main_img.jpg) no-repeat 0 0;
-        background-size: 100%;
-        border: 2px solid #000;
+        background-color: #452;
+        transition: 0.5s;
       }
-      /* 
-      display: none;  < 이건 그냥 딱 쓰면 존재 자체가 사라짐
-
-      visibility: hidden; < 얘들은 딱 써도 투명해질 뿐 존재는 있음 
-      opacity: 0;  < 
-      */
+      .box5 {
+        background-color: #412;
+        transition: 0.5s;
+      }
     </style>
   </head>
   <body>
-    <div class="box1 box1-1"></div>
-    <div class="box1 box1-2"></div>
-    <div class="box1 box1-3"></div>
-    <div class="box2 box2-1"></div>
-    <div class="box2 box2-2"></div>
-    <div class="box2 box2-3"></div>
-    <div class="box2 box2-4"></div>
-    <div class="box2 box2-5"></div>
-    <div class="box3"></div>
-    <h1 class="txt1">Hello World</h1>
+    <div class="box1 box1-1"><div class="box1 in_box"></div></div>
+    <div class="box1 box1-2"><div class="box1 in_box"></div></div>
+    <div class="box1 box1-3"><div class="box1 in_box"></div></div>
+    <div class="box1 box1-4"><div class="box1 in_box"></div></div>
     <br />
     <br />
     <br />
     <br />
+    <div class="box2"></div>
     <br />
-    <div class="box4"></div>
+    <div class="box1 box3"></div>
+    <div class="box1 box4"></div>
+    <div class="box1 box3"></div>
   </body>
 </html>
