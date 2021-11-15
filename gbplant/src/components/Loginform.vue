@@ -49,15 +49,15 @@ export default {
   },
   methods: {
     submitForm() {
-      const formData = new FormData();
-      formData.append("id", this.id);
-      formData.append("password", this.password);
-      // const info = {
-      //   id: this.id,
-      //   password: this.password,
-      // };
+      // const formData = new FormData();
+      // formData.append("id", this.id);
+      // formData.append("password", this.password);
+      const info = {
+        id: this.id,
+        password: this.password,
+      };
       this.axios
-        .post("http://211.216.92.115:5000/GB/login", formData)
+        .post("http://211.216.92.115:5000/GB/login", info)
         .then((req) => {
           console.log(req.data.loginSuccess);
           if (req.data.loginSuccess === true) {
