@@ -1,0 +1,84 @@
+#basic div { /*#basic 하위 div요소에 적용 */
+  width: 100px; 
+  height: 100px;
+  float:left;  /*[문8] 플로팅 속성을 이용해 옆으로 배치*/
+  margin: 30px;
+}
+.bg-tr1{ 
+  background-color:skyblue;
+  transition-property: all; /*[문9] 트랜지션 적용 속성 : 모든값(기본값)*/
+  transition-timing-function: ease; 
+  transition-duration: 1s; /*[문10] 트랜지션 실행시간 1초*/
+}
+.bg-tr1:hover {
+  background-color:blue;
+}
+.border-tr2 {
+  background-color: orange;
+  border: 3px solid black;
+  transition-timing-function:linear;/*[문11] 처음부터 같은속도*/
+  transition-duration: 1.5s; /*[문12] 실행시간 1.5초*/
+}
+.border-tr2:hover {
+  border: 3px solid red;
+  border-radius: 50%;
+}
+.box3 {
+    float: left;
+    margin:30px auto;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    color : white;
+    border: 1px solid darkgray;
+    transition-property: width, height;  /* [문13]트랜지션 대상 - 너비, 높이 */
+    transition-duration: 2s, 1s;  /* [문14]트랜지션 실행시간 - 너비:2초, 높이 1초 */
+  }
+  .box3:hover {
+    width:200px;
+    height:120px;   
+  }
+  .box4 {
+    margin:50px auto;
+    width: 100px;
+    height: 100px; 
+    background-color:orange;
+    border: 1px solid #222;
+    transition: 2s ease-in;  /* [문15] 대상: all, 시간:2초, 함수:ease-in */
+  }
+.box4:hover {  
+  width: 200px;
+  height: 200px;
+  background-color: orangered;
+  transform: skew(270deg);  /* [문16]270 회전 */   
+}
+  #ex div{ /*#ex 하위 div요소에 적용 */
+    float:left;
+    width:150px;
+    height:50px;
+    margin:5px 10px;
+    padding:5px;
+    color:white;
+    background-color:#006aff;
+    border-radius:5px;
+    text-align:center;
+    font-weight:bold; 
+  }
+  #ex:hover div{  /*[문17]#ex 에 마우스를 올리면 div에 스타일 적용 */ 
+    height:400px;
+  }
+  #ex .ease {/*#ex 하위 클래스 ease에 적용 */
+    transition: 3s ease; 
+  }
+  #ex .linear{
+    transition:3s linear; /*[문18] 3초간 linear 값으로 적용  */ 
+  }
+  #ex .ease-in{
+    transition: 3s ease-in;/*[문19] 3초간 ease-in 값으로 적용  */ 
+  }
+  #ex .ease-out{
+    transition:3s ease-out;
+  }
+  #ex .ease-in-out{
+    transition:3s ease-in-out;
+  }

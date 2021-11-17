@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>트랜지션과 애니메이션</title>
+    <style>
+      div {
+        /*[문2-1]* 전체 div 속성 이름아이디*/
+        width: 1000px;
+        margin: 20px auto; /*[문2-2] 마진을 위아래20px 좌우로 auto로 가운데 정렬*/
+      }
+      h1 {
+        text-align: center; /*[문2-3]글자 정렬 : 가운데*/
+      }
+      ul {
+        list-style: none; /*[문2-4]리스트 불릿(점)을 없도록 */
+        padding: 0;
+      }
+      li {
+        float: left; /*[문2-5]플롯 속성을 이용 옆으로배치 */
+        padding: 0;
+        margin: 10px;
+        overflow: hidden; /*넘치는 부분 숨김*/
+        position: relative; /*[문2-6]캡션의 부모요소로 설정 */
+      }
+      img {
+        float: left; /*[문2-5]플롯 속성을 이용 옆으로배치 */
+        margin: 0;
+        padding: 0;
+        z-index: 5; /*숫자가 크면 다른 요소보다 위에 있음   */
+      }
+      .caption {
+        position: relative; /*[문2-7] 부모요소 기준으로 위치설정*/
+        top: 200px; /*기준 위치보다 200px 아래로 */
+        width: 300px;
+        height: 200px;
+        padding-top: 20px;
+        background: rgba(0, 0, 0, 0.6); /*반투명한 검정 배경 */
+        opacity: 0; /*화면에 보이지 않게 */
+        transition: all 0.6s ease-in-out; /* [문3-1] 나타날 때 부드럽게 트랜지션 추가 */
+        z-index: 10; /*다른 요소보다 위에 있도록   */
+      }
+      li:hover .caption {
+        opacity: 1; /* 설명글이 화면에 보이게 */
+        transform: rotateY(200px); /*[문3-2] 설명글이 위로 200px 이동하게 */
+      }
+      .caption h2,
+      .caption p {
+        color: white;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>신상품목록</h1>
+      <ul>
+        <!--[문1-1]. 순서가 없는 목록 -->
+        <li>
+          <!--[문1-2]. 리스트 아이템 -->
+          <img src="images/prod1.jpg" alt="" />
+          <!--[문1-3]. 그림 삽입-->
+          <div class="caption">
+            <h2>상품1</h2>
+            <p>상품 1 설명 텍스트</p>
+            <p>가격 : 12,345원</p>
+          </div>
+        </li>
+        <!--[문1-2]. 리스트 아이템 -->
+        <li>
+          <img src="images/prod2.jpg" alt="" />
+          <div class="caption">
+            <h2>상품2</h2>
+            <p>상품 2 설명 텍스트</p>
+            <p>가격 : 12,345원</p>
+          </div>
+        </li>
+        <li>
+          <img src="images/prod3.jpg" alt="" />
+          <div class="caption">
+            <h2>상품3</h2>
+            <p>상품 2 설명 텍스트</p>
+            <p>가격 : 12,345원</p>
+          </div>
+        </li>
+      </ul>
+      <!--[문1-1]. 순서가 없는 목록 -->
+    </div>
+  </body>
+</html>
