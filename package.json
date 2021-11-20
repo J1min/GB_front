@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/J1min/GB_front/issues"
   },
-  "homepage": "https://github.com/J1min/GB_front#readme"
+  "homepage": "https://github.com/J1min/GB_front#readme",
+  "devDependencies": {
+    "prettier": "2.4.1"
+  }
 }
