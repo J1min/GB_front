@@ -4,108 +4,201 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>마운티아</title>
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/main.css" />
+    <title>마운티아사이트</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
   </head>
   <body>
     <div id="wrap">
-      <!-- 상단 부분 -->
+      <!-- 상단부분 -->
       <header id="header">
-        <div class="menus">
-          <a href="#">로그인 |</a>
-          <a href="#">로그인 |</a>
-          <a href="#">로그인 |</a>
-          <a href="#">로그인 |</a>
-          <a href="#">로그인 |</a>
-          <a class="last_menu" href="#">어쩌구</a>
-        </div>
-
         <div id="header_in">
-          <img src="./images/logo.jpg" style="margin-top: 30px" alt="" />
-        </div>
-        <div class="q_mn">
-          <h3>NEW • BEST • EVENT</h3>
+          <h1 class="logo">
+            <a href="#"><img src="images/logo.jpg" alt="" /></a>
+          </h1>
+          <ul class="q_mn">
+            <li><a href="#">NEW</a></li>
+            <!-- ntn-child(1) first-child -->
+            <li><a href="#">BEST</a></li>
+            <!-- ntn-child(2)  -->
+            <li><a href="#">EVENT</a></li>
+            <!-- ntn-child(3) last-child-->
+          </ul>
+          <input type="search" placeholder="검색어를 입력하세요" />
+          <a href="#"
+            ><img style="margin-top: 5px" src="images/search.jpg" alt=""
+          /></a>
+          <a href="#" class="latest"><img src="images/latest.jpg" alt="" /></a>
+          <ul class="info_mn">
+            <li><a href="#">JOIN</a></li>
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">MYPAGE</a></li>
+            <li><a href="#">CART(1)</a></li>
+            <li><a href="#">즐겨찾기</a></li>
+          </ul>
         </div>
         <nav id="main_nav_area">
           <ul>
-            <li id="left1"><a href="#">menu1</a></li>
-            <li><a href="#">menu1</a></li>
-            <li><a href="#">menu1</a></li>
-            <li><a href="#">menu1</a></li>
-            <li><a href="#">menu1</a></li>
-            <li><a href="#">menu1</a></li>
-            <li><a href="#">menu1</a></li>
-            <li><a href="#">menu1</a></li>
+            <li>
+              <a href="#"><img src="images/nav_01.jpg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/nav_02.jpg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/nav_03.jpg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/nav_04.jpg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/nav_05.jpg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/nav_05.jpg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/nav_07.jpg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/nav.jpg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/nav_08.jpg" alt="" /></a>
+            </li>
           </ul>
+          <div id="submn_area">submn_area</div>
         </nav>
       </header>
-      <!-- 메인 이미지 -->
+      <!-- 메인이미지 -->
       <section id="main_img"></section>
-      <!-- 콘텐츠 부분 -->
+
+      <!-- 콘텐츠부분 -->
       <section id="contents">
         <article class="item">
           <header class="item_h">
-            <img
-              src="./images/스크린샷 2021-11-13 오전 11.46.27.png"
-              alt=""
-            />
+            <h2 class="online">POPULAR</h2>
+            <h2 class="offline">ITEM</h2>
+            <ul>
+              <li><a href="#eng">영어영어영어영어</a></li>
+              <li><a href="#eng">영어영어영어영어</a></li>
+              <li><a href="#eng">영어영어영어영어</a></li>
+            </ul>
           </header>
-          <section class="item_b">
-            <img src="./images/popular2.jpg" alt="" />
-            <img src="./images/popular2.jpg.jpg" alt="" />
-            <img src="./images/popular_item.jpg" alt="" />
+          <section class="item_b" style="text-align: center">
+            <div class="box">
+              <img src="./images/popular_item.jpg" alt="fila" />
+              <h3>
+                <p>[트레킹] 휠라#1</p>
+                <p style="margin-top: 10px">98,000원</p>
+              </h3>
+            </div>
+            <div class="box">
+              <img
+                style="float: left"
+                src="./images/popular_item.jpg"
+                alt="fila"
+              />
+              <h3>
+                <p>[트레킹] 휠라#1</p>
+                <p style="margin-top: 10px">98,000원</p>
+              </h3>
+            </div>
+
+            <div class="box">
+              <img src="./images/popular_item.jpg" alt="fila" />
+              <h3>
+                <p>[트레킹] 휠라#1</p>
+                <p style="margin-top: 10px">98,000원</p>
+              </h3>
+            </div>
+            <div class="box">
+              <img src="./images/popular_item.jpg" alt="fila" />
+              <h3>
+                <p>[트레킹] 휠라#1</p>
+                <p style="margin-top: 10px">98,000원</p>
+              </h3>
+            </div>
           </section>
         </article>
         <article class="banner">
           <ul>
-            <li><img src="./images/banner01.jpg" alt="" /></li>
-            <li><img src="./images/banner02.jpg" alt="" /></li>
-            <li><img src="./images/banner03.jpg" alt="" /></li>
+            <li>
+              <a href="#"><img src="./images/banner01.jpg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./images/banner02.jpg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./images/banner03.jpg" alt="" /></a>
+            </li>
           </ul>
         </article>
         <article class="movie">
-          <img src="./images/con03.png" alt="" srcset="" />
-        </article>
-
-        <article class="style">
           <img
-            id="st1"
-            src="./images/스크린샷 2021-11-13 오전 11.45.44.png"
+            style="width: 100%; height: 260px"
+            src="./images/movie.png"
             alt=""
           />
-          <div>
-            <img src="./images/1MQJDW402_0_198.jpg" alt="" />
-            <!-- <h1>어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구어쩌구</h1></div> -->
-            <div><img src="./images/1MQJDW411_0_198.jpg" alt="" /></div>
-            <div><img src="./images/1MQJDW452_0_198.jpg" alt="" /></div>
-            <div><img src="./images/1MQJDW5002_0_198.jpg" alt="" /></div>
-          </div>
+        </article>
+        <article class="style">
+          <header class="item_h">
+            <h2 class="online">POPULAR</h2>
+            <h2 class="offline">ITEM</h2>
+            <ul>
+              <li><a href="#eng">영어영어영어영어</a></li>
+              <li><a href="#eng">영어영어영어영어</a></li>
+              <li><a href="#eng">영어영어영어영어</a></li>
+            </ul>
+          </header>
+          <section class="item_b" style="text-align: center">
+            <div class="box">
+              <img src="./images/popular_item.jpg" alt="fila" />
+              <h3>
+                <p>[트레킹] 휠라#1</p>
+                <p style="margin-top: 10px">98,000원</p>
+              </h3>
+            </div>
+            <div class="box">
+              <img
+                style="float: left"
+                src="./images/popular_item.jpg"
+                alt="fila"
+              />
+              <h3>
+                <p>[트레킹] 휠라#1</p>
+                <p style="margin-top: 10px">98,000원</p>
+              </h3>
+            </div>
+
+            <div class="box">
+              <img src="./images/popular_item.jpg" alt="fila" />
+              <h3>
+                <p>[트레킹] 휠라#1</p>
+                <p style="margin-top: 10px">98,000원</p>
+              </h3>
+            </div>
+            <div class="box">
+              <img src="./images/popular_item.jpg" alt="fila" />
+              <h3>
+                <p>[트레킹] 휠라#1</p>
+                <p style="margin-top: 10px">98,000원</p>
+              </h3>
+            </div>
+          </section>
         </article>
         <article class="go_btns">
-          <img src="./images/gobtn.jpg" alt="" /> <br />
-          <img src="./images/gobtn.png" alt="" />
+          <img src="./images/goto_shop01.png" alt="" /> <br />
+          <img src="./images/goto_shop02.png" alt="" />
+          <img src="./images/goto_shop03.png" alt="" />
         </article>
-        <article class="info_box">
-          <img
-            style="margin-top: -270px; margin-left: 500px"
-            src="./images/goto_shop03.png"
-            alt=""
-          />
-        </article>
+        <article class="info_box"></article>
+        <article class="info_box"></article>
       </section>
-      <!-- 하단 부분 -->
+
+      <!-- 하단부분 -->
       <footer id="footer">
-        <div class="f_top">
-          <ul>
-            <li><img src="./images/footer_top01.png" alt="" /></li>
-            <img src="./images//footer_top02.png" alt="" />
-          </ul>
-        </div>
-        <img
-          src="./images/스크린샷 2021-11-13 오후 12.07.22.png"
-          alt=""
-        />
+        <div class="f_top">f_top</div>
         <div class="f_line"></div>
         <div class="f_bom"></div>
       </footer>
