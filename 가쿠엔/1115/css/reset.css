@@ -163,3 +163,11 @@ input,
 select {
   vertical-align: middle;
 }
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
