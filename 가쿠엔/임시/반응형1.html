@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형</title>
+    <style>
+      #main_img {
+        background-size: 100%;
+        width: 100%;
+        height: 750px;
+        background: url(../1115/images/img_top2.jpg) no-repeat 50% 0;
+      }
+      body {
+        background-color: #000;
+      }
+      #all {
+        margin: 0 auto;
+        width: 1220px;
+      }
+      #all div {
+        width: 300px;
+        height: 300px;
+        margin-right: 10px;
+        background-color: aqua;
+        display: inline-block;
+      }
+      #all div:last-child {
+        margin-right: 0;
+      }
+      @media screen and (max-width: 1220px) {
+        body {
+          background-color: red;
+        }
+        #all {
+          margin: 0 auto;
+          width: 100%;
+        }
+        #all div {
+          width: 32%;
+          height: 300px;
+          margin-right: 1%;
+          background-color: aqua;
+          display: inline-block;
+        }
+        #all div:last-child {
+          margin-right: 0;
+        }
+      }
+      @media screen and (max-width: 1300px) {
+        body {
+          background-color: blue;
+        }
+        #all {
+          margin: 0 auto;
+          width: 100%;
+        }
+        #all div {
+          float: none;
+          width: 90%;
+          height: 350px;
+          margin-left: 5%;
+          margin-right: 0;
+          margin-bottom: 15px;
+          background-color: aqua;
+          display: inline-block;
+        }
+        /* #all div:nth-child(2) {
+          display: none;
+        } */
+        #all div:last-child {
+          margin-right: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main_img"></div>
+    <div id="main_1"><img src="../찐운티아/images/nav_08.jpg" alt="" /></div>
+    <div id="all">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </body>
+</html>

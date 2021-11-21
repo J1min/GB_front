@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>단위</title>
+    <style>
+      body {
+        font-size: 15px;
+      }
+      /* rem en vh vw vmin xmax ex */
+      .box1 {
+        font-size: 20px;
+      }
+      .box1-1 {
+        font-size: 2em; /* 20px */
+      }
+      .box1-1-1 {
+        font-size: 2em; /* 40px */
+      }
+      .box2 {
+        font-size: 10px;
+      }
+      .box3 {
+        font-size: 10vw;
+      }
+      .box4 {
+        font-size: 10vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      부모텍스트입니다
+      <div class="box1-1">
+        자식텍스트입니다 부모텍스트 사이즈가 20px이라면 1em = 100%라는 의미
+        (2em은 2배)
+        <div class="box1-1-1">자손텍스트입니다</div>
+        <div class="box2">현재텍스트입니다</div>
+      </div>
+      <div class="box3">현재화면의 가로크기를 기준으로 설정</div><br><br>
+      <div class="box4">현재화면의 세로높이를 기준으로 설정</div>
+    </div>
+  </body>
+</html>

@@ -11,4 +11,4 @@ class Test extends Component {
     return <div>{this.state.name}</div>;
   }
 }
-export default Test
+export default Test;
