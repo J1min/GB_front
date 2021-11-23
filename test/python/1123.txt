@@ -1,0 +1,16 @@
+파이썬에서 json 파일을 만지는 법.
+
+일단 애초에 react는 data.id.name.age 이런식으로 접근을 하는데 파이썬은
+
+data['id']['name']['age'] 이렇게 접근을 한다
+
+- code -
+
+import json
+from urllib.request import urlopen
+
+url = "~.json"
+response = urlopen(url)
+result = json.loads(response.read())
+
+result['name'] 이런식으로 접근 함

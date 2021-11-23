@@ -1,28 +1,18 @@
-def is_odd(num):
-  if num%2==1:
-    return True
-  else:
-    return False
 
-def is_even(num):
-  if num%2==0:
-    return True
-  else:
-    return False
+money = input("님돈얼마있? ")
 
-def is_prime(num):
-  cnt = 0
-  for i in range(2,num):
-    if(num%i==0):
-      cnt=cnt+1
-  if cnt>1:
-    return True
-  else:
-    return False
+def bitcoinIsGood(money):
+  import json
+  from urllib.request import urlopen
 
-def show(num):
-  print( is_even(num))
-  print(is_odd(num))
-  print(is_prime(num))
+  url = "https://api.coindesk.com/v1/bpi/currentprice/KRW.json"
+  response = urlopen(url)
+  source = response.read().decode("utf-8")
 
-show(3)
+  tree = json.loads(source)
+  price = (tree['bpi']['KRW']['rate_float'])
+  return float(money)/price
+
+
+print(f'{bitcoinIsGood(money)}')
+

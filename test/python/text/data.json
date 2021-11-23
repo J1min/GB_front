@@ -1,0 +1,13 @@
+{
+  "request_id": "0",
+  "return_type": "omAnalysis",
+  "result": 0,
+  "reason": "",
+  "return_object": {
+    "query": "한국의 가을은 매우 아름답습니다.",
+    "type": "감성분석",
+    "score": 0.9999995231628418,
+    "label": "긍정"
+  },
+  "result_code": "success"
+}
