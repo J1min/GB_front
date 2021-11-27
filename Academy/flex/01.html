@@ -12,14 +12,20 @@
     }
     #container {
       display: flex;
+      border: 1px solid red;
+      width: 500px; height:300px;
+      flex-wrap: no-wrap;
+    }
+    #container div{
+      border: 1px solid #000;
     }
   </style>
 </head>
 <body>
   <div id="container">
-    <div id="box1"><h1></h1></div>
-    <div id="box2"><h1></h1></div>
-    <div id="box3"><h1></h1></div>
+    <div id="box1"><h1>1</h1></div>
+    <div id="box2"><h1>2</h1></div>
+    <div id="box3"><h1>3</h1></div>
   </div>
 </body>
 </html>

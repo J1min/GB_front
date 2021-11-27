@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/J1min/GB_front#readme",
   "devDependencies": {
-    "prettier": "2.4.1"
+    "prettier": "^2.5.0"
   }
 }

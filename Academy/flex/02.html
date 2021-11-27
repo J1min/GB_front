@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      #wrap {
+        display: flex;
+        border: 3px solid red;
+        width: 500px;
+        height: 60px;
+      }
+      #wrap div {
+        width: 100px;
+        border: 1px solid #000;
+        background-color: blue;
+      }
+      .container1 {
+        justify-content: flex-start;
+      }
+      .container2 {
+        justify-content: flex-end;
+      }
+      .container3 {
+        justify-content: center;
+      }
+      .container4 {
+        justify-content: space-between;
+      }
+      .container5 {
+        justify-content: space-around;
+      }
+      .container6 {
+        justify-content: space-evenly;
+      }
+    </style>
+  </head>
+  <body>
+    flex - start
+
+    <div class="container1" id="wrap">
+      <div id="box1"><h1>1</h1></div>
+      <div id="box2"><h1>2</h1></div>
+      <div id="box3"><h1>3</h1></div>
+    </div>
+    flex - end
+
+    <div class="container2" id="wrap">
+      <div id="box1"><h1>1</h1></div>
+      <div id="box2"><h1>2</h1></div>
+      <div id="box3"><h1>3</h1></div>
+    </div>
+    flex - center
+
+    <div class="container3" id="wrap">
+      <div id="box1"><h1>1</h1></div>
+      <div id="box2"><h1>2</h1></div>
+      <div id="box3"><h1>3</h1></div>
+    </div>
+    flex - space between
+
+    <div class="container4" id="wrap">
+      <div id="box1"><h1>1</h1></div>
+      <div id="box2"><h1>2</h1></div>
+      <div id="box3"><h1>3</h1></div>
+    </div>
+    flex - space around
+
+    <div class="container5" id="wrap">
+      <div id="box1"><h1>1</h1></div>
+      <div id="box2"><h1>2</h1></div>
+      <div id="box3"><h1>3</h1></div>
+    </div>
+    flex - space evenly
+    <div class="container6" id="wrap">
+      <div id="box1"><h1>1</h1></div>
+      <div id="box2"><h1>2</h1></div>
+      <div id="box3"><h1>3</h1></div>
+    </div>
+  </body>
+</html>
