@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>단위</title>
+    <style>
+      #main_img {
+        width: 100%;
+        height: 39vw;
+        border-bottom: 2px solid tomato;
+        background: url(images/img_top2.jpg) no-repeat 50% 0;
+        background-size: 100%;
+      }
+      #main_img_1 {
+        width: 100%;
+        height: auto;
+        border-bottom: 2px solid tomato;
+      }
+      #main_img_1 img {
+        width: 100%;
+      }
+
+      #all {
+        width: 1220px;
+        margin: 0 auto;
+      }
+      #all > div {
+        float: left;
+        width: 400px;
+        height: 400px;
+        margin-right: 10px;
+        background-color: aquamarine;
+      }
+      #all > div:last-child {
+        margin-right: 0;
+      }
+
+      .text01 {
+        clear: left;
+        width: 100%;
+        padding: 20px;
+      }
+
+      @media screen and (max-width: 1220px) {
+        body {
+          background-color: bisque;
+        }
+
+        #all {
+          width: 100%;
+          margin: 0 auto;
+        } /*1280*/
+        #all > div {
+          float: left;
+          width: 32.6%;
+          height: 36.6vw; /* 400 /12.8 =%*/
+          margin-right: 1%;
+          background-color: aquamarine;
+        }
+        #all > div:last-child {
+          margin-right: 0;
+        }
+        /*@media screen and (min-width:1920px) {}*/
+        /* 자식태그(px) / 부모태그(px) = 결과값
+     결과값 * 100 = %(퍼센트) 
+        (400px / 1280px)*100 = 값%
+       
+     */
+      }
+
+      @media screen and (max-width: 1000px) {
+        body {
+          background-color: rgb(38, 212, 116);
+        }
+        #all {
+          width: 100%;
+          margin: 0 auto;
+        } /*1280*/
+        #all > div {
+          float: left;
+          width: 48.9%;
+          height: 400px;
+          margin-right: 1%;
+          background-color: aquamarine;
+        }
+        #all > div:nth-child(2) {
+          display: none;
+        }
+        #all > div:last-child {
+          margin-right: 0;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        body {
+          background-color: rgb(99, 38, 212);
+        }
+        #all {
+          width: 100%;
+          margin: 0 auto;
+        } /*1280*/
+        #all > div {
+          float: none;
+          width: 90%;
+          height: 350px;
+          margin-right: 0%;
+          margin-left: 5%;
+          margin-bottom: 15px;
+          background-color: aquamarine;
+        }
+        #all > div:nth-child(2) {
+          display: block;
+        }
+        #all > div:last-child {
+          margin-right: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main_img"></div>
+    <div id="main_img_1">
+      <img src="images/img_top2.jpg" alt="" />
+    </div>
+    <div id="all">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <p class="text01">
+      출력장치에 따라 다르게 표현하는 Media Queries HTML의 구조를 표현하는 CSS의
+      속성들은 일반적으로 다른 미디어 유형과 공유하면서 사용할 수 있습니다. 예를
+      들어서 폰트의 크기, 색상 등은 프린터에서도 곧잘 표현해 주지요. 하지만 그
+      속성에 대해 어떤 기기들은 제대로 표현되지 않을 수 있습니다. 예를 들어
+      모니터에서는 폰트의 크기가 12px 정도면 아주 깔끔하게 표시되지만 프린터는
+      12px이라는 단위를 이해하지 못합니다. 프린터는 12px의 값을 9pt로 바꾸고
+      프린트 해 줍니다. 종이에서는 이정도 크기가 보기에 좋다는 뜻입니다 즉
+      모니터의 폰트 크기는 종이에 프린트 되는 폰트의 크기보다 조금 커야 보기
+      좋고 같은 속성에 대해 서로 다른 가치기준을 가지고 있기 때문에 이러한
+      것들을 고려하여 특정 미디어 유형에 별도로 적용할 수 있는 CSS 속성들을
+      정의하여 표현하는 방법이 미디어 쿼리입니다.
+    </p>
+  </body>
+</html>

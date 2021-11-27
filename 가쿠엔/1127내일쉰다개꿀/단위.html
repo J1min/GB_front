@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>단위</title>
+    <style>
+      /* CSS의 7가지 단위 - rem, em, vh, vw, vmin, vmax, ex */
+      body {
+        font-size: 15px;
+      }
+      .box1 {
+        font-size: 20px;
+      }
+      .box1-1 {
+        font-size: 2em;
+      } /*40px*/
+      .box1-1-1 {
+        font-size: 2em;
+      } /*80px*/
+
+      .box2 {
+        font-size: 1rem;
+      }
+
+      /* em와 ex 차이점*/
+
+      .box3 {
+        font-size: 10vw;
+      }
+      .box4 {
+        font-size: 10vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      부모텍스트입니다
+      <div class="box1-1">
+        자식텍스트입니다 부모텍스트사이즈 20px 2em는 100%
+        <div class="box1-1-1">
+          자손텍스트입니다 자식텍스트사이즈 20px 1em는 100%
+        </div>
+        <div class="box2">현재텍스트입니다</div>
+      </div>
+      <br /><br /><br /><br /><br />
+
+      <div class="box3">현재화면의 가로크기를 기준 설정</div>
+      <br /><br />
+      <div class="box4">현재화면의 세로크기를 기준 설정</div>
+    </div>
+  </body>
+</html>

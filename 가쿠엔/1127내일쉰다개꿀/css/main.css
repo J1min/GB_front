@@ -1,0 +1,461 @@
+@charset "utf-8";
+
+#wrap {
+  width: 100%;
+}
+
+#main {
+  width: 100%;
+  height: 690px;
+  background: url(../images/mainslide01.jpg) no-repeat 50% 0;
+  background-size: 100%;
+}
+
+#header {
+  width: 100%;
+  height: 140px;
+  background: rgba(0, 0, 0, 0.2);
+}
+#header_in {
+  margin: 0 auto;
+  width: 1300px;
+  height: 140px;
+}
+#header_in .logo {
+  float: left;
+  padding-top: 60px;
+}
+#header_in .group {
+  float: right;
+}
+#header_in .info_mn {
+  float: left;
+  margin-left: 470px;
+  margin-top: 10px;
+}
+#header_in .info_mn > li {
+  float: left;
+  border-right: 1px solid #fff;
+  line-height: 14px;
+  margin-right: 10px;
+  padding-right: 10px;
+}
+#header_in .info_mn > li:last-child {
+  border-right: 0px;
+  margin-right: 0px;
+  padding-right: 0px;
+}
+#header_in .info_mn > li > a {
+  font-size: 14px;
+  color: #fff;
+}
+
+#header_in .main_nav {
+  clear: left;
+  padding-top: 30px;
+}
+#header_in .main_nav li {
+  float: left;
+  margin-right: 80px;
+}
+#header_in .main_nav li:last-child {
+  margin-right: 0;
+}
+#header_in .main_nav li > a {
+  font-size: 20px;
+  color: #fff;
+}
+#main .main_txt {
+  width: 100%;
+  padding-top: 70px;
+}
+#main .main_txt h3 {
+  font-size: 45px;
+  color: #fff;
+  text-decoration: underline;
+  text-align: center;
+}
+#main .main_txt p {
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  padding-top: 35px;
+}
+
+#contents {
+  width: 100%;
+}
+#travel {
+  width: 100%;
+  height: 860px;
+  background: linear-gradient(#fff 35%, rgba(239, 228, 176, 10.3) 35%);
+  background: -webkit-linear-gradient(#fff 35%, rgba(239, 228, 176, 0.3) 35%);
+  background: -ms-linear-gradient(#fff 35%, rgba(239, 228, 176, 0.3) 35%);
+}
+#travel > header {
+  width: 100%;
+  height: 100px;
+}
+#travel > header h3 {
+  font-size: 45px;
+  text-align: center;
+  line-height: 100px;
+}
+#travel > header span {
+  color: #000;
+}
+#travel > section {
+  margin: 0 auto;
+  width: 1300px;
+  background-color: rosybrown;
+}
+#travel > section figure {
+  float: left;
+  width: 420px;
+  height: 760px;
+  margin-right: 20px;
+}
+#travel > section figure:last-child {
+  margin-right: 0;
+}
+#travel figure img {
+  width: 100%;
+}
+#travel figure h4 {
+  padding-top: 40px;
+  font-size: 20px;
+  text-align: center;
+}
+#travel figure p {
+  padding: 20px 0 30px 0;
+  line-height: 2.2;
+  font-size: 13px;
+  text-align: center;
+}
+#travel figure a {
+  font-size: 15px;
+  font-weight: 500;
+  border-top: 2px solid #000;
+  color: #000;
+  display: block;
+  margin: 0 auto;
+  width: 40px;
+  text-align: center;
+}
+
+#contents .group {
+  margin: 0 auto;
+  width: 1300px;
+  height: 400px;
+}
+#advice {
+  float: left;
+  margin-top: 70px;
+  width: 860px;
+  height: 240px;
+  background: url(../images/bg_app.jpg) no-repeat 0 0;
+  background-size: 100%;
+}
+#advice ul {
+  margin: 50px 0 0 20px;
+}
+#advice li {
+  float: left;
+  margin-right: 10px;
+  width: 400px;
+  height: 125px;
+  border: 2px solid #fff;
+  background: rgba(0, 0, 0, 0.2);
+}
+#advice a {
+  display: block;
+  height: 100%;
+  padding: 40px 0 0 40px;
+  box-sizing: border-box;
+  font-size: 30px;
+  color: #fff;
+}
+#advice img {
+  vertical-align: text-bottom;
+}
+
+#notice {
+  float: right;
+  margin-top: 70px;
+}
+#notice > header {
+  height: 55px;
+}
+#notice h3 {
+  font-size: 30px;
+}
+/* #notice > section{}
+#notice ul{} */
+#notice li {
+  margin-bottom: 15px;
+  padding-left: 20px;
+  font-size: 16px;
+  background: url(../images/ico_bullet.png) no-repeat 0 50%;
+}
+
+#footer {
+  width: 100%;
+  height: 190px;
+  border-top: 2px solid #000;
+}
+#footer_in {
+  margin: 0 auto;
+  width: 1300px;
+}
+#footer_in .info_mn {
+}
+#footer_in .info_mn li {
+  float: left;
+  border-right: 1px solid #333;
+  margin-right: 10px;
+  padding-right: 10px;
+  line-height: 15px;
+}
+#footer_in .info_mn li:last-child {
+  border-right: 0;
+  margin-right: 0;
+  padding-right: 0;
+}
+#footer_in .info_mn a {
+  font-size: 15px;
+  color: #333;
+}
+#footer_in .address {
+  clear: left;
+  padding-top: 15px;
+  font-style: normal;
+}
+#footer_in .address h4 {
+  font-size: 15px;
+}
+#footer_in .addr_txt {
+  font-size: 13px;
+}
+#footer_in .sns {
+  font-size: 15px;
+}
+
+@media screen and (max-width: 1300px) {
+  #header {
+    width: 100%;
+    height: 140px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  #header_in {
+    margin: 0 auto;
+    width: 100%;
+    height: 140px;
+  }
+  #header_in .logo {
+    float: left;
+    padding-top: 60px;
+  }
+  #header_in .group {
+    float: right;
+  }
+  #header_in .info_mn {
+    float: left;
+    margin-left: 470px;
+    margin-top: 10px;
+  }
+  #header_in .info_mn > li {
+    float: left;
+    border-right: 1px solid #fff;
+    line-height: 14px;
+    margin-right: 10px;
+    padding-right: 10px;
+  }
+  #header_in .info_mn > li:last-child {
+    border-right: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+  }
+  #header_in .info_mn > li > a {
+    font-size: 14px;
+    color: #fff;
+  }
+
+  #header_in .main_nav {
+    clear: left;
+    padding-top: 30px;
+  }
+  #header_in .main_nav li {
+    float: left;
+    margin-right: 80px;
+  }
+  #header_in .main_nav li:last-child {
+    margin-right: 0;
+  }
+  #header_in .main_nav li > a {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  #travel {
+    width: 100%;
+    height: 860px;
+    background: linear-gradient(#fff 35%, rgba(239, 228, 176, 10.3) 35%);
+    background: -webkit-linear-gradient(#fff 35%, rgba(239, 228, 176, 0.3) 35%);
+    background: -ms-linear-gradient(#fff 35%, rgba(239, 228, 176, 0.3) 35%);
+  }
+  #travel > header {
+    width: 100%;
+    height: 100px;
+  }
+  #travel > header h3 {
+    font-size: 45px;
+    text-align: center;
+    line-height: 100px;
+  }
+  #travel > header span {
+    color: #000;
+  }
+  #travel > section {
+    margin: 0 auto;
+    width: 100%;
+    background-color: rosybrown;
+  }
+  #travel > section figure {
+    float: left;
+    /* width:420px; */
+    width: 32%;
+    height: 760px;
+    margin-right: 20px;
+  }
+  #travel > section figure:last-child {
+    margin-right: 0;
+  }
+  #travel figure img {
+    width: 100%;
+  }
+  #travel figure h4 {
+    padding-top: 40px;
+    font-size: 20px;
+    text-align: center;
+  }
+  #travel figure p {
+    padding: 20px 0 30px 0;
+    line-height: 2.2;
+    font-size: 13px;
+    text-align: center;
+  }
+  #travel figure a {
+    font-size: 15px;
+    font-weight: 500;
+    border-top: 2px solid #000;
+    color: #000;
+    display: block;
+    margin: 0 auto;
+    width: 40px;
+    text-align: center;
+  }
+
+  #contents .group {
+    margin: 0 auto;
+    width: 100%;
+    height: 400px;
+  }
+  #advice {
+    float: left;
+    margin-top: 70px;
+    width: 66%;
+    height: 240px;
+    background: url(../images/bg_app.jpg) no-repeat 0 0;
+    background-size: 860px;
+  } /*w860px*/
+  #advice ul {
+    margin: 50px 0 0 2%;
+  }
+  #advice li {
+    float: left;
+    margin-right: 10px;
+    width: 46.5%;
+    height: 125px;
+    border: 2px solid #fff;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  #advice a {
+    display: block;
+    height: 100%;
+    padding: 40px 0 0 10%;
+    box-sizing: border-box;
+    font-size: 22px;
+    color: #fff;
+  }
+  #advice img {
+    vertical-align: text-bottom;
+  }
+
+  #notice {
+    float: right;
+    margin-top: 70px;
+  }
+  #notice > header {
+    height: 55px;
+  }
+  #notice h3 {
+    font-size: 30px;
+  }
+  /* #notice > section{}
+                      #notice ul{} */
+  #notice li {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    font-size: 16px;
+    background: url(../images/ico_bullet.png) no-repeat 0 50%;
+  }
+
+  #footer {
+    width: 100%;
+    height: 190px;
+    border-top: 2px solid #000;
+  }
+  #footer_in {
+    margin: 0 0;
+    width: 100%;
+  }
+  #footer_in .info_mn {
+  }
+  #footer_in .info_mn li {
+    float: left;
+    border-right: 1px solid #333;
+    margin-right: 10px;
+    padding-right: 10px;
+    line-height: 15px;
+  }
+  #footer_in .info_mn li:last-child {
+    border-right: 0;
+    margin-right: 0;
+    padding-right: 0;
+  }
+  #footer_in .info_mn a {
+    font-size: 15px;
+    color: #333;
+  }
+  #footer_in .address {
+    clear: left;
+    padding-top: 15px;
+    font-style: normal;
+  }
+  #footer_in .address h4 {
+    font-size: 15px;
+  }
+  #footer_in .addr_txt {
+    font-size: 13px;
+  }
+  #footer_in .sns {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 980px) {
+  #contents .group {
+    margin: 0 auto;
+    width: 100%;
+    height: 400px;
+  }
+}
